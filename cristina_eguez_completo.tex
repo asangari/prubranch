@@ -1,0 +1,424 @@
+
+\documentclass[a4paper,spanish]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsfonts}
+\usepackage[spanish]{babel}
+
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{Created=Monday, September 10, 2007 11:32:14}
+%TCIDATA{LastRevised=Friday, June 08, 2012 16:15:33}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{CSTFile=article.cst}
+%TCIDATA{PageSetup=71,71,71,71,0}
+%TCIDATA{ComputeDefs=
+%$f\left( x,y\right) =\left\{ 
+%\begin{array}{cc}
+%\frac{x^{2}y}{\sqrt{x^{2}+y^{2}}} & \text{si }\overline{x}\neq \overline{0}
+%\\ 
+%0 & \text{si }\overline{x}=\overline{0}%
+%\end{array}%
+%\right. \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ g\left( x,y\right) =\left\{ 
+%\begin{array}{cc}
+%\dfrac{xy^{2}}{x^{2}+y^{4}} & \text{si }\overline{x}\neq \overline{0} \\ 
+%0 & \text{si }\overline{x}=\overline{0}%
+%\end{array}%
+%\right. $
+%}
+
+%TCIDATA{AllPages=
+%H=36
+%F=36
+%}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+\newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+\topmargin=-2cm
+\oddsidemargin=0cm
+\textwidth=16cm
+\textheight=26cm
+\renewcommand{\baselinestretch}{1.5}
+\input{tcilatex}
+\begin{document}
+
+\title{\textbf{OPTIMIZACI\'{O}N SIN C\'{A}LCULO DIFERENCIAL}}
+\author{\underline{\textbf{Cristina Eg\"{u}ez\ }}\textbf{\ \ \ \ \ \ \ \ \ \
+\ \ \ \ \ \ \ \ \ \ \ \ } \ \underline{\textbf{Antonio S\'{a}ngari}}\textbf{%
+\ } \and \ \ \ \ \ \ \  \\
+%EndAName
+\textbf{Facultad de Ciencias Exactas. Universidad Nacional de Salta}\\
+\textbf{Consejo de Investigaci\'{o}n de la Universidad Nacional de Salta}\\
+\textbf{criseguez2000@gmail.com}}
+\date{}
+\maketitle
+
+\textbf{Categor\'{\i}a:} Reflexiones
+
+\textbf{Nivel Educativo:} Universitario
+
+\textbf{Palabras claves}: tetraedro - \'{a}rea m\'{\i}nima - optimizaci\'{o}%
+n - tri\'{a}ngulo medial
+
+\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 
+
+\begin{center}
+\textbf{RESUMEN}
+\end{center}
+
+Los problemas de optimizaci\'{o}n se pueden, por regla general, reducir al
+estudio de una funci\'{o}n en forma anal\'{\i}tica y muchas veces el c\'{a}%
+lculo se hace tedioso. Aqu\'{\i} presentamos la resoluci\'{o}n de problemas
+de \'{a}rea y vol\'{u}men m\'{\i}nimos, en el plano y en el espacio, a trav%
+\'{e}s de razonamientos geom\'{e}tricos interesantes que permiten alcanzar
+el objetivo m\'{a}s r\'{a}pidamente y formular algunas conjeturas.
+
+\section{Fundamentaci\'{o}n}
+
+En un trabajo anterior\footnote{%
+S\'{a}ngari, A. Eg\"{u}ez, C. Una s\'{\i}ntesis del c\'{a}lculo y la geometr%
+\'{\i}a: Localizaci\'{o}n del Punto de Fermat. Revista de Educaci\'{o}n Matem%
+\'{a}tica. Vol 27.1 Recuperado de
+http://www.famaf.unc.edu.ar/rev\_edu/\#rev\_intro\_volumen (2012).}
+enfatizamos la importancia de resolver problemas del c\'{a}lculo
+diferencial, siempre que se pueda, de m\'{a}s de una forma. En esta
+oportunidad, presentamos una serie de pasos para resolver problemas de
+optimizaci\'{o}n relacionados con tri\'{a}ngulos y prismas sin hacer uso del
+c\'{a}lculo diferencial, como se har\'{\i}a habitualmente, y encontrando
+caminos interesantes a trav\'{e}s de la geometr\'{\i}a elemental. La aplicaci%
+\'{o}n de la condici\'{o}n suficiente para la resoluci\'{o}n del problema de
+minimizar el volumen de un tetraedro apoyado en los planos coordenados y que
+pase por un punto del primer octante, nos llev\'{o} a intentar una resoluci%
+\'{o}n por medios geom\'{e}tricos a fin de evitar el tedio de los c\'{a}%
+lculos pertinentes. Esto a su vez, nos condujo a formular algunas conjeturas
+y a resolver nuevos planteos.geom\'{e}tricos y de optimizaci\'{o}n m\'{a}s
+generales. De esta manera surgi\'{o} el presente trabajo que muestra
+resoluciones geom\'{e}tricas de minimizaci\'{o}n.
+
+\section{Area m\'{\i}nima de un tri\'{a}ngulo a partir de un \'{a}ngulo y un
+punto del lado opuesto}
+
+\subsection{Problema 1.}
+
+\emph{Sea }$A$\emph{\ un punto del primer cuadrante. Entre todos los tri\'{a}%
+ngulos que tienen al punto }$A$\emph{\ en uno de sus lados, y los lados
+restantes sobre los ejes de coordenadas, encontrar el de menor \'{a}rea.}
+
+\subsubsection{An\'{a}lisis previo}
+
+\textquestiondown Qu\'{e} informaci\'{o}n nos suministra el enunciado?
+
+\begin{description}
+\item[a.] El punto $A$ tiene coordenadas $\left( a,b\right) $ con $a,b>0$.
+
+\item[b.] El tri\'{a}ngulo es rect\'{a}ngulo y $A$ y est\'{a} sobre la
+hipotenusa.
+
+\item[c.] Uno de los v\'{e}rtices es el punto $\left( 0,0\right) $.y los
+otros son $\left( x,0\right) $, $\left( 0,y\right) $.
+\end{description}
+
+\textquestiondown Cu\'{a}l es el objetivo?\textbf{\ }Encontrar los v\'{e}%
+rtices $\left( x,0\right) $, $\left( 0,y\right) $ del tri\'{a}ngulo.
+
+\subsubsection{Subproblema 1.}
+
+\emph{A partir de las condiciones a, b y c, mostrar que si }$A$\emph{\ no es
+punto medio de la hipotenusa, siempre es posible construir otro tri\'{a}%
+ngulo de \'{a}rea menor.}
+
+Tomemos un punto $A$ de coordenadas $\left( a,b\right) $ como en la figura
+1. Sea el tri\'{a}ngulo $OED$ de tal modo que el segmento $AE$ sea mayor que
+el segmento $AD$. Sea $D^{\prime }$ el sim\'{e}trico de $D$ con respecto al
+punto $A$ y $B$ el punto de intersecci\'{o}n de la abscisa con su
+perpendicular desde $D$. Sea $C$ la intersecci\'{o}n de la recta $AB$ con la
+ordenada. Notemos que los tri\'{a}ngulos $ACD$ y $ABD^{\prime }$ son
+congruentes y por tanto $OBC$ es menor\footnote{%
+Diremos mayor para denotar mayor \'{a}rea o mayor volumen cuando en el
+contexto esto est\'{e} claro. An\'{a}logamente para menor.} que $OED$.%
+\[
+\FRAME{itbpFU}{3.4203in}{2.4284in}{0in}{\Qcb{Figura 1}}{}{tricoorfig1.png}{%
+\special{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
+TRUE;display "USEDEF";valid_file "F";width 3.4203in;height 2.4284in;depth
+0in;original-width 4.0785in;original-height 2.8876in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";filename
+'F:/Optimizacion/TriCoorFig1.PNG';file-properties "XNPEU";}} 
+\]
+
+Resumiendo, tenemos un m\'{e}todo para construir tri\'{a}ngulos menores, que
+cumplen las condiciones del problema 1, siempre y cuando $A$ no sea el punto
+medio de la hipotenusa. Si el segmento $DA$ fuera mayor que el $AE$, el
+procedimiento ser\'{\i}a similar.
+
+Hemos probado que si $A$ no es punto medio de la hipotenusa siempre es
+posible hallar uno menor. Ahora vamos a probar que si $A$ es punto medio de
+la hipotenusa cualquier otro es mayor.
+
+\subsubsection{Subproblema 2.}
+
+\emph{Sea }$BOC$\emph{\ un tri\'{a}ngulo que tiene el \'{a}ngulo recto en }$%
+O $ \emph{y el punto }$A$\emph{\ sobre la hipotenusa }$BC$\emph{. Mostrar
+que el tri\'{a}ngulo de menor \'{a}rea es el que tiene a }$A$\emph{\ como
+punto medio de la hipotenusa}$.$
+
+Sea $DOE$ un \'{a}ngulo recto tal que $A$ est\'{a} en la hipotenusa $DE$ y
+no es punto medio. Dado que los segmentos $BC$ y $DE$ se cortan en $A$, uno
+de los puntos $D$ o $E$ quedar\'{a} en el semiplano opuesto al que contiene
+al tri\'{a}ngulo $OBC$ respecto de $BC$. Si $B$ est\'{a} entre $O$ y $E$, y
+trazamos por $B$ una recta $r$ paralela a $OC$. Podemos probar que $r$
+siempre cortar\'{a} al segmento $AE$ en un punto $D^{\prime }$, como
+observamos en la figura 1. De esta manera siempre es posible obtener un tri%
+\'{a}ngulo $ABD^{\prime }$ congruente con $ACD$ y un tri\'{a}gulo $%
+BED^{\prime }$ tal que, en relaci\'{o}n a las \'{a}reas, $DOE-BOC=ACD$.
+Luego, $DOE$ es mayor que $BOC$.
+
+\paragraph{Una peque\~{n}a digresi\'{o}n}
+
+Una mirada m\'{a}s cuidadosa al procedimiento usado anteriormente, nos lleva
+a notar que en ning\'{u}n momento necesitamos hacer uso del \'{a}ngulo recto
+en $O$, por tanto podemos conjeturar que este resultado es v\'{a}lido para
+cualquier tri\'{a}ngulo. De esto, surge el teorema de la sesi\'{o}n \ref{2}.
+
+\subsubsection{Subproblema 3.}
+
+\emph{Sea }$OBC$ \emph{un tri\'{a}ngulo que tiene a }$A=\left( a,b\right) $%
+\emph{\ como punto medio de uno de sus lados, y los lados restantes sobre
+los ejes de coordenadas, hallar los v\'{e}rtices }$\left( x,0\right) $ \emph{%
+e} $\left( 0,y\right) $.
+
+Sean $A_{1}=\left( a,0\right) $ y $A_{2}=\left( 0,b\right) $. Por ser $A$
+punto medio del segmento $BC$ (figura 1), $A_{2}A$ es base media de $OBC$,
+luego, $x=2a$ y $B=\left( 2a,c\right) $, an\'{a}logamente, usando el punto $%
+A_{2}$, obtenemos $C=\left( 0,2b\right) $.
+
+\subsection{Teorema del tri\'{a}ngulo de \'{a}rea m\'{\i}nima\label{2}}
+
+\begin{description}
+\item[\textbf{Teorema 1}] \emph{Sea un \'{a}ngulo }$A$\emph{\ y un punto }$%
+A^{\prime }$\emph{\ en el interior de }$A$\emph{. De todos los tri\'{a}%
+ngulos que comparten el \'{a}ngulo }$A$\emph{\ y que el lado opuesto }$BC$%
+\emph{\ contiene a }$A^{\prime }$\emph{, el de menor \'{a}rea es el que
+tiene a }$A^{\prime }$\emph{\ como punto medio de }$BC$\emph{.}
+\end{description}
+
+Primero mostraremos la existencia de tal tri\'{a}gulo y luego justificaremos
+que es el de \'{a}rea m\'{\i}nima.
+
+\textbf{Prueba de la existencia del tri\'{a}ngulo. }Sea $A$ el v\'{e}rtice
+del \'{a}ngulo dado y $A^{\prime }$ el punto del lado opuesto, tracemos por $%
+A^{\prime }$ rectas paralelas a los lados del \'{a}ngulo y determinemos los
+puntos $C^{\prime }$ y $B^{\prime }$ como en la figura 2.
+
+\[
+\FRAME{itbpFU}{2.386in}{2.3341in}{0in}{\Qcb{Figura 2}}{}{trimedfig2.png}{%
+\special{language "Scientific Word";type "GRAPHIC";display
+"USEDEF";valid_file "F";width 2.386in;height 2.3341in;depth
+0in;original-width 2.9516in;original-height 3.1488in;cropleft "0";croptop
+"0.9811";cropright "0.9613";cropbottom "0";filename
+'F:/Optimizacion/TriMedFig2.PNG';file-properties "XNPEU";}} 
+\]%
+Tracemos por $A^{\prime }$ una paralela $r$ a $B^{\prime }C^{\prime }$. Los
+puntos $B$ y $C$ del tri\'{a}ngulo son la intersecci\'{o}n de $r$ con cada
+uno de los lados del \'{a}ngulo dado.
+
+De los paralelogramos $A^{\prime }CB^{\prime }C^{\prime }$ y $A^{\prime
+}BC^{\prime }B^{\prime }$, deducimos que $A^{\prime }$ es el punto medio de $%
+BC$. An\'{a}logmente se observa para los otros \'{a}ngulos. Esta es una
+propiedad de la base media y del tri\'{a}gulo medial.
+
+\textbf{Prueba del \'{a}rea m\'{\i}nima. }Supongamos un tri\'{a}ngulo $ADE$
+gen\'{e}rico tal que $A^{\prime }$ est\'{a} en $DE$, como en la figura 3.
+Dado que los segmentos $BC$ y $DE$ se cortan en $A^{\prime }$, \ los puntos $%
+D$ y $E$ no estan en el mismo semiplano respecto de la recta $BC$.
+Supongamos que $B$ est\'{a} entre $A$ y $E$, as\'{\i}, el \'{a}ngulo $%
+A^{\prime }BE$ es exterior del tri\'{a}ngulo $ABC$. Si trazamos por $B$ una
+paralela a $AC$, podemos probar que esta recta \ siempre cortar\'{a} al
+segmento $A^{\prime }E$ en un punto $D^{\prime }$. De esta manera, siempre
+es posible obtener el tri\'{a}ngulo $A^{\prime }BD^{\prime }$ congruente con 
+$ACD,$ y el tri\'{a}ngulo $D^{\prime }BE$, tal que, en relaci\'{o}n a las 
+\'{a}reas, $ADE-ABC=$ $D^{\prime }BE$. Luego $ADE$ es mayor que $ABC$.%
+\[
+\FRAME{itbpFU}{2.4976in}{1.4918in}{0in}{\Qcb{Figuara 3}}{}{trigenfig3.png}{%
+\special{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
+TRUE;display "USEDEF";valid_file "F";width 2.4976in;height 1.4918in;depth
+0in;original-width 2.4569in;original-height 1.4563in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";filename
+'F:/Optimizacion/TriGenFig3.png';file-properties "XNPEU";}} 
+\]
+
+\section{Volumen m\'{\i}nimo de un tetraedro apoyado en los planos
+coordenados}
+
+\subsection{Problema 2.}
+
+\emph{Sea }$A$\emph{\ un punto del primer octante. Entre todos los
+tetraedros que tienen al punto }$A$\emph{\ en una de sus caras, y los caras
+restantes sobre los plano coordenados, encontrar el de menor \'{a}rea.}
+
+\subsection{An\'{a}lisis previo}
+
+Observamos que este problema es una extensi\'{o}n del problema 1 al espacio
+tridimensional. Por tanto podemos realizar un procedimiento an\'{a}logo al
+anterior.y utilizar algunos resultados. Ahora, nuestro objetivo es encontrar
+los v\'{e}rtices\emph{\ }$\left( x,0,0\right) $\emph{, }$\left( 0,y,0\right) 
+$,\emph{\ }$\left( 0,0,z\right) $ del tetraedro.
+
+\subsection{Subproblema 1}
+
+\emph{A partir de las condiciones del problema 2, mostrar que el tetraedro
+de menor volumen es que tiene al punto }$A$ \emph{como baricentro de la cara
+que lo contiene.}
+
+Sea el tetraedro $OPQR$ como en la figura 4, mostremos que $A$ es el
+baricentro del tri\'{a}ngulo $PQR.$
+
+\[
+\FRAME{itbpFU}{5.4872in}{3.6599in}{0in}{\Qcb{Figura 4}}{}{tetraedrofig4.wmf}{%
+\special{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
+TRUE;display "USEDEF";valid_file "F";width 5.4872in;height 3.6599in;depth
+0in;original-width 5.9171in;original-height 3.9375in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";filename
+'F:/Optimizacion/tetraedroFig4.wmf';file-properties "XNPEUR";}} 
+\]
+
+\textbf{Caso 1. Los tetraedros tienen la misma altura}
+
+Consideremos los tetraedros $OPQR$ y $OSTR$ de la figura 4, ambos tienen la
+misma altura $OR$ y contienen al punto $A$ en la cara opuesta a $O$ y $A$ es
+el baricentro de $PQR$. Si $R^{\prime }$ el punto medio de $PQ$, el segmento 
+$RR^{\prime }$ pertenece a ambos tetraedros. Aplicando el teorema anterior, $%
+OPQ$ es menor que $OST$ y por tener la misma altura $OPQR$ es menor que $%
+OSTR $.
+
+Si tres caras se apoyan sobre los panos coordenados y el baricentro est\'{a}
+en la opuesta al origen de coordenadas, por propiedad de las medianas,
+resulta que si $A$ tiene coordenadas $\left( a,b,c\right) ,$ las coordenadas
+de los v\'{e}rtices restantes del tetraedro son $\left( 3a,0,0\right) $, $%
+\left( 0,3b,0\right) $ y $\left( 0,0,3c\right) $.
+
+\textbf{Caso 2. Los tetraedros tienen alturas diferentes}
+
+Ahora, consideremos los tetraedros con altura diferente, $OPQR$ y $OSTU$,
+con $U$ est\'{a} entre $O$ y $R$, como en la figura5. Podemos probar que la
+recta $UA$ corta al plano $OPQ$ en un punto $U^{\prime }$ que est\'{a} del
+otro lado de la recta $PQ$ que $O$. Tracemos por $U^{\prime }$ una recta $r$
+paralela a $PQ$. Sean $K$ y $L\ $ las intersecciones de $r$ con las rectas $%
+OP$ y $OQ$ respectivamente. Como $OPQ$ y $OKL$ son semejantes, $U^{\prime }$
+es punto medio de $KL$, por estar en la semirrecta $OR^{\prime }$. Entonces,
+por el teorema anterior $OST$ es mayor que $OKL$, y por tanto $OSTU$ es
+mayor que $OKLU$.
+
+\[
+\FRAME{itbpFU}{6.4169in}{4.2912in}{0in}{\Qcb{Figura 5}}{}{tetra2.wmf}{%
+\special{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
+TRUE;display "USEDEF";valid_file "F";width 6.4169in;height 4.2912in;depth
+0in;original-width 6.3538in;original-height 4.2393in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";filename
+'F:/Optimizacion/tetra2.wmf';file-properties "XNPEUR";}} 
+\]
+
+Tendr\'{\i}amos que probar ahora, que $OKLU$ es mayor que $OPQR$, para ello
+consideremos la figura 6, donde $GHI$ es paralelo a las bases y pasa por $A$%
+. Sea $V_{a}$ el volumen de la pir\'{a}mide $OPQR$ y $V_{b}$ el volumen de $%
+OKLU$. Dado que $A$ es el baricentro de la cara frontal $PQR$ y considerando
+que las medianas se cortan en una relaci\'{o}n $2:1$, el volumen de $IGHB$
+es $\frac{8}{27}V_{a}$ y el volumen de $IGHU$ es menor que $\frac{8}{27}%
+V_{b} $, porque el baricentro de la cara $UKL$ se encuentra por debajo de $A$%
+. As\'{\i}, la pir\'{a}mide truncada $ORQGHI$ tiene volumen igual a $\frac{19%
+}{27}V_{a}$ y la pir\'{a}mide truncada $OKLGHI$ tiene volumen mayor que $%
+\frac{19}{27}V_{b}$. De esto deducimos que la diferencia de parte inferior
+entre las pir\'{a}mides, $GKPLQH$, tiene volumen mayor que $\left\vert \frac{%
+19}{27}V_{a}-\frac{19}{27}V_{b}\right\vert $. As\'{\i} tambi\'{e}n la
+diferencia superior entre las pir\'{a}mides, $RGUH$ tiene volumen menor que $%
+\left\vert \frac{8}{27}V_{a}-\frac{8}{27}V_{b}\right\vert $. Entonces: 
+\[
+OKLGHI>\frac{19}{27}\left\vert V_{a}-V_{b}\right\vert >\frac{8}{27}%
+\left\vert V_{a}-V_{b}\right\vert >RGUH 
+\]%
+\[
+\FRAME{itbpFU}{6.1125in}{4.0811in}{0in}{\Qcb{Figura 6}}{}{terta3.wmf}{%
+\special{language "Scientific Word";type "GRAPHIC";maintain-aspect-ratio
+TRUE;display "USEDEF";valid_file "F";width 6.1125in;height 4.0811in;depth
+0in;original-width 6.052in;original-height 4.0309in;cropleft "0";croptop
+"1";cropright "1";cropbottom "0";filename
+'F:/Optimizacion/terta3.wmf';file-properties "XNPEUR";}} 
+\]
+
+La desigualdad anterior implica que $OKLU$ es mayor que $OPQR$.
+
+Nos quedar\'{\i}a solamente el caso de la pir\'{a}mide de altura mayor, pero
+esta se convierte r\'{a}pidamente el una de altura menor considerando otra
+de las bases.
+
+\subsubsection{Subproblema 2}
+
+\emph{Hallar los v\'{e}rtices del tetraedro con volumen m\'{\i}nimo, bajo
+las condiciones del problema 1.}
+
+Dado que tres caras se apoyan sobre los panos coordenados y el baricentro est%
+\'{a} en la opuesta al origen de coordenadas, por propiedad de que las
+medians se cortan en una relaci\'{o}n $2:1$, resulta que si $A$ tiene
+coordenadas $\left( a,b,c\right) ,$ las coordenadas de los v\'{e}rtices
+restantes del tetraedro son $\left( 3a,0,0\right) $, $\left( 0,3b,0\right) $
+y $\left( 0,0,3c\right) $
+
+\subsection{Teorema del tetraedro de volumen m\'{\i}nimo}
+
+Esta demostraci\'{o}n no requiri\'{o} del hecho de que las caras est\'{e}n
+en los planos coordenados, por tanto tambien puede se puede generalizar
+mediante el siguiente teorema.
+
+\begin{description}
+\item[Teorema 2] \emph{Si }$A$ \emph{es un punto interior de un triedro de v%
+\'{e}rtice }$O$\emph{. De todos los tetraedros que comparten este triedro y
+que la cara opuesta a }$O$\emph{\ contiene a }$A$\emph{, el de menor \'{a}%
+rea es el que tiene al punto }$A$\emph{\ como baricentro de la cara opuesta
+a }$O.$
+\end{description}
+
+\section{Conclusi\'{o}n}
+
+Los problemas 1 y 2 se enfocan cl\'{a}sicamente en un curso de an\'{a}lisis
+de varias variables usando el m\'{e}todo de los multilpicadores de Lagrange.
+Tambi\'{e}n son resolubles anal\'{\i}ticamente a trav\'{e}s de composici\'{o}%
+n de funciones y de curvas de nivel. En este trabajo aprovechamos la
+naturaleza del problema para intentar su soluci\'{o}n por medios geom\'{e}%
+tricos, y, en este intento, no s\'{o}lo encontramos soluci\'{o}n para los
+mismos, sino que adem\'{a}s surgieron planteos m\'{a}s generales que pudimos
+resolverlos sin hacer uso del c\'{a}lculo diferencial. Por otra parte,
+resolverlos anal\'{\i}ticamente implica el tedio de cuentas largas y
+complicadas.
+
+M\'{a}s all\'{a} de encontrar o no las soluciones, aqu\'{\i} lo esencial es
+promover en los estudiantes una actitud creativa capaz de plantear e
+intentar resolver problemas, buscar distintos caminos de ataque y agotar
+todas las instancias. Quiz\'{a}s esto lleve mucho tiempo pero de eso se
+trata la matem\'{a}tica: de pensar y repensar aunque a veces no se encuentre
+la soluci\'{o}n. Si podemos transmitir esto a nuestros estudiantes estaremos
+formando personas "resolvedoras de problemas", como dice George Polya
+(1.887-1.985).
+
+\end{document}

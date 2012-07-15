@@ -1,0 +1,2313 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\options intoc,bibliography=totoc,index=totoc,BCOR10mm,captions=tableheading,titlepage,fleqn
+\use_default_options true
+\begin_modules
+theorems-ams
+eqs-within-sections
+figs-within-sections
+customHeadersFooters
+\end_modules
+\maintain_unincluded_children false
+\language spanish
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman lmodern
+\font_sans lmss
+\font_typewriter lmtt
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\float_placement h
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "pdfpagelayout=OneColumn, pdfnewwindow=true, pdfstartview=XYZ, plainpages=false"
+\papersize a4paper
+\use_geometry true
+\use_amsmath 2
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date true
+\use_refstyle 0
+\branch chapter-1
+\selected 1
+\filename_suffix 0
+\color #ffaa00
+\end_branch
+\branch chapter-2
+\selected 1
+\filename_suffix 0
+\color #55aaff
+\end_branch
+\branch Summary
+\selected 1
+\filename_suffix 0
+\color #7f7f7f
+\end_branch
+\branch Acknowledgments
+\selected 1
+\filename_suffix 0
+\color #ffff00
+\end_branch
+\branch Appendix
+\selected 1
+\filename_suffix 0
+\color #faf0e6
+\end_branch
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2.5cm
+\topmargin 2.5cm
+\rightmargin 2.5cm
+\bottommargin 2.5cm
+\secnumdepth 3
+\tocdepth 2
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 2
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\noindent
+\align center
+
+\series bold
+\size large
+GEOMETRÍA ELEMENTAL Y TRANSFORMACIONES CONFORMES 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+
+\series bold
+\bar under
+Antonio Sángari
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+
+\series bold
+Universidad Nacional de Salta
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+
+\series bold
+(Avenida Bolivia N° 5150)
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+
+\series bold
+asangari2000@gmail.com
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace bigskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Categoría del Trabajo:
+\series default
+ Reflexiones.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Nivel educativo: 
+\series default
+Universitario.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Palabras claves:
+\series default
+ Geometría Sintética, Enseñanza de la Geometría, Variable Compleja, Enseñanza
+ del Cálculo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Resumen: 
+\series default
+En este trabajo presentamos una sucesión de conceptos elementales de geometría
+ y de variable compleja, tendientes a resolver un problema de las transformacion
+es conformes en el plano complejo.
+ El problema trata sobre encontrar una transformación conforme biyectiva
+ del círculo unitario en si mismo que transforme cuatro puntos de la circunferen
+cia en vértices de un rectángulo.
+ En este caso debemos encontrar el centro y la razón de la inversión geométrica
+ que preserve la circunferencia inicial, pero que transforme cuatro puntos
+ cualesquiera en vértices de un rectángulo.
+ Usaremos geometría sintética básica para encontrar el punto mencionado
+ y luego indicaremos cómo los cálculos para encontrar las coordenadas de
+ este punto se simplifican debido nuevamente a consideraciones geométricas.
+ Consideramos este problema de importancia pedagógica pues permite a los
+ estudiantes trazar un paralelo entre los cálculos algebraicos y la geometría
+ básica.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace medskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introducción
+\end_layout
+
+\begin_layout Standard
+Un conocido teorema debido a Riemann, llamado el Teorema de la Aplicación
+ Conforme, dice que cualquier dominio abierto simplemente conexo y distinto
+ de todo el plano complejo, puede transformarse por medio de una transformación
+ conforme en el círculo unitario (ver 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Wunsch"
+
+\end_inset
+
+).
+ Este teorema tiene amplia utilidad en resolución exacta de ecuaciones diferenci
+ales cuando el operador relacionado es invariante frente a las transformaciones
+ conformes, como es el caso del Laplaciano (ver 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Papamichael"
+
+\end_inset
+
+).
+ En este contexto surgen problemas como el mencionado en el resumen.
+ Los textos que tratan este problema rara vez explican el origen de la fórmula
+ que resuelve este problema, que es 
+\begin_inset Formula 
+\begin{equation}
+\frac{z-a}{1-\overline{a}z}\label{eq:formBusc}
+\end{equation}
+
+\end_inset
+
+puesto que, en general, no constituye el objetivo principal del texto.
+ Sin embargo, si la situación está configurada dentro de un contexto educativo
+ deberíamos indicar algunos pasos para justificar la génesis de la fórmula.
+ 
+\end_layout
+
+\begin_layout Standard
+Un principio del aprendizaje es la manipulación de los objetos que se pretende
+ asimilar.
+ Este principio suele ser olvidado debido a las circunstancias.
+ Pero, como mostraremos en este trabajo, un tratamiento desde otra perspectiva
+ del problema resultaría en un entendimiento más profundo de las transformacione
+s conformes, puesto que permite al estudiante una exploración de conceptos,
+ como indicaremos posteriormente.
+ 
+\end_layout
+
+\begin_layout Standard
+Tenemos primeramente que dar algunos conceptos de geometría para sentar
+ una base común sobre definiciones y resultados.
+ No profundizaremos demasiado sobre estos conceptos, pero recomendamos la
+ lectura de 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Coxeter"
+
+\end_inset
+
+ para el lector interesado.
+ También presentaremos algunos resultados básicos de transformaciones conformes,
+ que nos servirán para dar la contraparte algebraica de este problema.
+ 
+\end_layout
+
+\begin_layout Section
+Herramientas de Geometría
+\end_layout
+
+\begin_layout Subsection
+El Teorema del Ángulo Inscripto
+\end_layout
+
+\begin_layout Theorem
+Todos los ángulos inscriptos 
+\begin_inset Formula $MNR$
+\end_inset
+
+ en una circunferencia 
+\begin_inset Formula $C$
+\end_inset
+
+ de radio 
+\begin_inset Formula $O$
+\end_inset
+
+, con 
+\begin_inset Formula $M$
+\end_inset
+
+, 
+\begin_inset Formula $N$
+\end_inset
+
+ y 
+\begin_inset Formula $R$
+\end_inset
+
+ en 
+\begin_inset Formula $C$
+\end_inset
+
+, del mismo lado que 
+\begin_inset Formula $O$
+\end_inset
+
+ con respecto a la cuerda 
+\begin_inset Formula $NR$
+\end_inset
+
+ de 
+\begin_inset Formula $C$
+\end_inset
+
+, son congruentes y son el ángulo mitad de 
+\begin_inset Formula $MOR$
+\end_inset
+
+.
+ Todos los ángulos inscriptos 
+\begin_inset Formula $MN'R$
+\end_inset
+
+ en 
+\begin_inset Formula $C$
+\end_inset
+
+ , con 
+\begin_inset Formula $N'$
+\end_inset
+
+ en 
+\begin_inset Formula $C$
+\end_inset
+
+, del lado opuesto a 
+\begin_inset Formula $O$
+\end_inset
+
+ con respecto a la cuerda 
+\begin_inset Formula $NR$
+\end_inset
+
+ de 
+\begin_inset Formula $C$
+\end_inset
+
+, son congruentes y son suplementarios con los ángulos inscriptos en 
+\begin_inset Formula $C$
+\end_inset
+
+ del mismo lado que 
+\begin_inset Formula $O$
+\end_inset
+
+.
+ (ver figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Ángulo-inscripto"
+
+\end_inset
+
+)
+\begin_inset CommandInset label
+LatexCommand label
+name "thm angIng"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Theorem
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../conformes/Presentaciones2012/anginsc.png
+	width 8cm
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Ángulo-inscripto"
+
+\end_inset
+
+Ángulo inscripto
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Una figura interactiva que permite la exploración por parte de los estudiante
+ de este tema se encuentra en http://www.unsa.edu.ar/~asangari/Anginsc.html
+\end_layout
+
+\begin_layout Standard
+Una consecuencia inmediata de este teorema es el corolario de los cuadriláteros
+ inscribibles.
+\end_layout
+
+\begin_layout Corollary
+Un cuadrilátero es inscribible en una circunferencia si y solamente si tiene
+ ángulos opuestos que son suplementarios.
+ 
+\end_layout
+
+\begin_layout Standard
+Es inmediato concluir que los paralelogramos inscribibles son rectángulos.
+\end_layout
+
+\begin_layout Subsection
+Potencia de un punto
+\end_layout
+
+\begin_layout Definition
+La potencia de un punto 
+\begin_inset Formula $P$
+\end_inset
+
+ con respecto a una circunferencia 
+\begin_inset Formula $C$
+\end_inset
+
+ de radio 
+\begin_inset Formula $r$
+\end_inset
+
+ y centro 
+\begin_inset Formula $O$
+\end_inset
+
+ es 
+\begin_inset Formula $d^{2}-r^{2}$
+\end_inset
+
+, donde 
+\begin_inset Formula $d$
+\end_inset
+
+ es la distancia de 
+\begin_inset Formula $O$
+\end_inset
+
+ a 
+\begin_inset Formula $P$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Remark
+La potencia de los puntos de 
+\begin_inset Formula $C$
+\end_inset
+
+ es 
+\begin_inset Formula $0$
+\end_inset
+
+, la de los exteriores a 
+\begin_inset Formula $C$
+\end_inset
+
+ es positiva y la de los interiores a 
+\begin_inset Formula $C$
+\end_inset
+
+ es negativa.
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $P$
+\end_inset
+
+ está en el exterior de 
+\begin_inset Formula $C$
+\end_inset
+
+ la potencia se puede calcular como el producto de 
+\begin_inset Formula $PA\times PA'$
+\end_inset
+
+ donde 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $A'$
+\end_inset
+
+ son puntos de 
+\begin_inset Formula $C$
+\end_inset
+
+ y están alineados con 
+\begin_inset Formula $P$
+\end_inset
+
+.
+ Para justificarlo vea la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:PotenciaExt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../conformes/Presentaciones2012/poten.png
+	lyxscale 40
+	width 8cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:PotenciaExt"
+
+\end_inset
+
+Potencia de un punto exterior a una circunferencia
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por el teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm angIng"
+
+\end_inset
+
+, los ángulos en 
+\begin_inset Formula $A$
+\end_inset
+
+ y en 
+\begin_inset Formula $B$
+\end_inset
+
+ son congruentes, y entonces los triángulos 
+\begin_inset Formula $BA'P$
+\end_inset
+
+ y 
+\begin_inset Formula $AB'P$
+\end_inset
+
+ son semejantes.
+ Entonces se da 
+\begin_inset Formula 
+\begin{equation}
+\frac{PB'}{PA'}=\frac{PA}{PB}\label{eq:semejantes}
+\end{equation}
+
+\end_inset
+
+que es equivalente a 
+\begin_inset Formula $PA\times PA'=PB\times PB'$
+\end_inset
+
+ .
+ Particularmente, si la cuerda es un diámetro, 
+\begin_inset Formula $PA\times PA'=\left(d+r\right)\times\left(d-r\right)=d^{2}-r^{2}$
+\end_inset
+
+.
+ Si el punto 
+\begin_inset Formula $P$
+\end_inset
+
+ está en el interior de 
+\begin_inset Formula $C$
+\end_inset
+
+, la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Potencia-Interior"
+
+\end_inset
+
+ muestra que también se cumple la relación 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:semejantes"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../conformes/Presentaciones2012/potInt.png
+	lyxscale 40
+	width 8cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Potencia-Interior"
+
+\end_inset
+
+Potencia desde un punto interior a una circunferencia
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Si 
+\begin_inset Formula $T$
+\end_inset
+
+ es el punto de tangencia de la recta tangente con 
+\begin_inset Formula $C$
+\end_inset
+
+ desde 
+\begin_inset Formula $P$
+\end_inset
+
+, entonces 
+\begin_inset Formula $PA\times PA'=PT\times PT$
+\end_inset
+
+, pues 
+\begin_inset Formula $PT$
+\end_inset
+
+ es uno de los catetos del triángulo rectángulo 
+\begin_inset Formula $POT$
+\end_inset
+
+ y por lo tanto 
+\begin_inset Formula $PT$
+\end_inset
+
+ tiene longitud 
+\begin_inset Formula $\sqrt{d^{2}-r^{2}}$
+\end_inset
+
+.
+ Estos resultados los podemos reunir en el
+\end_layout
+
+\begin_layout Theorem
+El módulo de la potencia de un punto 
+\begin_inset Formula $P$
+\end_inset
+
+ respecto a una circunferencia 
+\begin_inset Formula $C$
+\end_inset
+
+ es el producto 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $PA\times PA'$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang spanish
+, con 
+\begin_inset Formula $P$
+\end_inset
+
+, 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $A'$
+\end_inset
+
+ alineados y 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $A'$
+\end_inset
+
+ en 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ Mas aún, si el punto es exterior a la circunferencia, la potencia se calcula
+ por 
+\begin_inset Formula $PT\times PT$
+\end_inset
+
+ siendo 
+\begin_inset Formula $T$
+\end_inset
+
+ un punto donde la tangente a 
+\begin_inset Formula $C$
+\end_inset
+
+ trazada desde 
+\begin_inset Formula $P$
+\end_inset
+
+ toca a 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ 
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:potencia"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Una figura interactiva que ilustra el este tema está en 
+\end_layout
+
+\begin_layout Standard
+http://www.unsa.edu.ar/~asangari/PotenPuntCirc.html
+\end_layout
+
+\begin_layout Subsection
+Un problema de Apolonio
+\end_layout
+
+\begin_layout Problem
+Sean dos puntos distintos 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ dados a un lado de la recta 
+\begin_inset Formula $r$
+\end_inset
+
+ dada.
+ Trazar una circunferencia que pasa por 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ y es tangente a 
+\begin_inset Formula $r$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Si la recta 
+\begin_inset Formula $AB$
+\end_inset
+
+ no corta a 
+\begin_inset Formula $r$
+\end_inset
+
+, entonces la mediatriz 
+\begin_inset Formula $m$
+\end_inset
+
+ de 
+\begin_inset Formula $AB$
+\end_inset
+
+ corta a 
+\begin_inset Formula $r$
+\end_inset
+
+ en un punto 
+\begin_inset Formula $D$
+\end_inset
+
+.
+ El punto 
+\begin_inset Formula $O$
+\end_inset
+
+ de intersección entre la mediatriz 
+\begin_inset Formula $n$
+\end_inset
+
+ de 
+\begin_inset Formula $AM$
+\end_inset
+
+ y 
+\begin_inset Formula $m$
+\end_inset
+
+, es el centro de la circunferencia buscada.
+ (ver figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ApolonioPar"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Problem
+\begin_inset Float figure
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../conformes/Presentaciones2012/recPar.png
+	width 8cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ApolonioPar"
+
+\end_inset
+
+Problema de Apolonio con la recta 
+\begin_inset Formula $r$
+\end_inset
+
+ paralela a la que contiene los puntos 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Problem
+Si la recta 
+\begin_inset Formula $AB$
+\end_inset
+
+ corta a 
+\begin_inset Formula $r$
+\end_inset
+
+ en el punto 
+\begin_inset Formula $D$
+\end_inset
+
+, entonces, por teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:potencia"
+
+\end_inset
+
+, la potencia de 
+\begin_inset Formula $D$
+\end_inset
+
+ con respecto a 
+\series bold
+cualquier
+\series default
+ circunferencia que pase por 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ será la misma.
+ Sea 
+\begin_inset Formula $T_{0}$
+\end_inset
+
+ el punto de tangencia desde 
+\begin_inset Formula $C$
+\end_inset
+
+ a la circunferencia que tiene por diámetro 
+\begin_inset Formula $AB$
+\end_inset
+
+ (o cualquier otra).
+ De nuevo, por teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:potencia"
+
+\end_inset
+
+, la intersección 
+\begin_inset Formula $T$
+\end_inset
+
+ de la circunferencia de centro 
+\begin_inset Formula $C$
+\end_inset
+
+ que pasa por 
+\begin_inset Formula $T_{0}$
+\end_inset
+
+ con 
+\begin_inset Formula $r$
+\end_inset
+
+ es el tercer punto de la circunferencia buscada.
+ (ver figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ApolonioRec"
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Problem
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../conformes/Presentaciones2012/ProApo.png
+	width 8cm
+
+\end_inset
+
+
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ApolonioRec"
+
+\end_inset
+
+Problema de Apolonio con la recta 
+\begin_inset Formula $r$
+\end_inset
+
+ secante a la que pasa por los puntos 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+De la resolución del problema de Apolonio se deduce sin dificultad que 
+\end_layout
+
+\begin_layout Theorem
+Sean 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+ y 
+\begin_inset Formula $C$
+\end_inset
+
+ puntos alineados, con 
+\begin_inset Formula $B$
+\end_inset
+
+ entre 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $C$
+\end_inset
+
+.
+ Los puntos de tangencia de las rectas que pasan por 
+\begin_inset Formula $C$
+\end_inset
+
+ con la correspondiente circunferencia que pasa por 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+, se hallan sobre una circunferencia de centro 
+\begin_inset Formula $C$
+\end_inset
+
+.
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:circIgualPot"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Remark
+Observe que los puntos 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ son inversos uno del otro con respecto a la circunferencia de centro 
+\begin_inset Formula $C$
+\end_inset
+
+ que pasa por 
+\begin_inset Formula $T$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+Una figura dinámica la puede encontrar en 
+\end_layout
+
+\begin_layout Standard
+http://www.unsa.edu.ar/~asangari/Problema_de_Apolonio.html
+\end_layout
+
+\begin_layout Subsection
+Circunferencias ortogonales
+\end_layout
+
+\begin_layout Definition
+Dos circunferencias son ortogonales, si se cortan formando ángulos rectos.
+\end_layout
+
+\begin_layout Theorem
+Si una circunferencia 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+ pasa por dos puntos distintos 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+, tal que 
+\begin_inset Formula $A$
+\end_inset
+
+ es el inverso del 
+\begin_inset Formula $B$
+\end_inset
+
+ con respecto a una circunferencia 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+, entonces 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+ son ortogonales.
+\begin_inset CommandInset label
+LatexCommand label
+name "thm:PinvCirc"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Proof
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ son inversos uno del otro con respecto a 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+ y sea 
+\begin_inset Formula $D$
+\end_inset
+
+ uno de los puntos de corte de 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+ con 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+.
+ Por esto, la inversa de 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+ es la propia 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+, pues 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+es la única circunferencia que pasa por 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+ y 
+\begin_inset Formula $D.$
+\end_inset
+
+ La recta radial de 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+ que pasa por 
+\begin_inset Formula $D$
+\end_inset
+
+, es tangente a 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+ pues la toca en 
+\begin_inset Formula $D$
+\end_inset
+
+ y entonces queda probado el teorema.
+\end_layout
+
+\begin_layout Theorem
+Sean 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+ y 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+ dos circunferencias ortogonales y sea 
+\begin_inset Formula $P$
+\end_inset
+
+ un punto de 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+.
+ Entonces 
+\begin_inset Formula $P'$
+\end_inset
+
+, inverso de 
+\begin_inset Formula $P$
+\end_inset
+
+ con respecto a 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+, también está en 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Proof
+Sea 
+\begin_inset Formula $D$
+\end_inset
+
+ un punto que está en 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+ y en 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $C_{3}$
+\end_inset
+
+ única circunferencia que pasa por 
+\begin_inset Formula $P$
+\end_inset
+
+, 
+\begin_inset Formula $P'$
+\end_inset
+
+ y 
+\begin_inset Formula $D$
+\end_inset
+
+.
+ Por teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:PinvCirc"
+
+\end_inset
+
+ 
+\begin_inset Formula $C_{3}$
+\end_inset
+
+ es ortogonal.
+ Luego el centro de 
+\begin_inset Formula $C_{3}$
+\end_inset
+
+ y el centro de 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+ están en la tangente a 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+ por 
+\begin_inset Formula $D$
+\end_inset
+
+.
+ Como los centros de 
+\begin_inset Formula $C_{3}$
+\end_inset
+
+ y 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+ están en la mediatriz de 
+\begin_inset Formula $PD$
+\end_inset
+
+, se concluye que coinciden.
+ Luego 
+\begin_inset Formula $C_{3}$
+\end_inset
+
+ y 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+ coinciden.
+\end_layout
+
+\begin_layout Subsection
+La inversión
+\end_layout
+
+\begin_layout Definition
+Dada una circunferencia 
+\begin_inset Formula $\omega$
+\end_inset
+
+ con centro 
+\begin_inset Formula $O$
+\end_inset
+
+ y radio 
+\begin_inset Formula $k$
+\end_inset
+
+, y un punto 
+\begin_inset Formula $P$
+\end_inset
+
+ diferente de 
+\begin_inset Formula $O$
+\end_inset
+
+, definimos el inverso de 
+\begin_inset Formula $P$
+\end_inset
+
+ como el punto 
+\begin_inset Formula $P'$
+\end_inset
+
+, en la semirrecta 
+\begin_inset Formula $OP$
+\end_inset
+
+, cuya distancia desde 
+\begin_inset Formula $O$
+\end_inset
+
+ satisface la ecuación 
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Formula $OP\times OP'=k^{2}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Se sigue de esta definición que el inverso de 
+\begin_inset Formula $P'$
+\end_inset
+
+ es 
+\begin_inset Formula $P$
+\end_inset
+
+, o sea que la inversión es involutiva.
+ 
+\end_layout
+
+\begin_layout Standard
+Otras propiedades interesantes de la inversión son:
+\end_layout
+
+\begin_layout Itemize
+Es una transformación conforme, es decir que preserva los ángulos
+\end_layout
+
+\begin_layout Itemize
+Las rectas y circunferencias se transforman en rectas y circunferencias
+\end_layout
+
+\begin_layout Itemize
+Las circunferencias ortogonales a la circunferencia de inversión se transforman
+ en si mismas.
+\end_layout
+
+\begin_layout Standard
+Para más detalle se puede leer los textos 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Arias,Coxeter"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Solución Geométrica
+\end_layout
+
+\begin_layout Subsection
+Centro de inversión
+\end_layout
+
+\begin_layout Standard
+En esta Sección encontraremos un punto 
+\begin_inset Formula $I$
+\end_inset
+
+ que es el centro de una circunferencia de inversión que transforma los
+ vértices de un cuadrilátero inscribible 
+\begin_inset Formula $ABCD$
+\end_inset
+
+ sin lados paralelos, como se muestra en la figura 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Cuadrilátero-inscribible"
+
+\end_inset
+
+, en los vértices de un rectángulo.
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ../conformes/Presentaciones2012/cuadr.ggb.png
+	lyxscale 40
+	width 8cm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Cuadrilátero-inscribible"
+
+\end_inset
+
+Cuadrilátero inscribible
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+Los puntos 
+\begin_inset Formula $E$
+\end_inset
+
+ y 
+\begin_inset Formula $F$
+\end_inset
+
+ son la intersección de las prolongaciones de los lados 
+\begin_inset Formula $AB$
+\end_inset
+
+ y 
+\begin_inset Formula $CD$
+\end_inset
+
+; y 
+\begin_inset Formula $AD$
+\end_inset
+
+ y 
+\begin_inset Formula $BC$
+\end_inset
+
+ respectivamente.
+ Los puntos 
+\begin_inset Formula $G$
+\end_inset
+
+ y 
+\begin_inset Formula $H$
+\end_inset
+
+ son puntos de tangencia de la circunferencia 
+\begin_inset Formula $ABC$
+\end_inset
+
+ con las rectas tangentes desde 
+\begin_inset Formula $F$
+\end_inset
+
+ y 
+\begin_inset Formula $E$
+\end_inset
+
+ respectivamente.
+ La circunferencia 
+\begin_inset Formula $\mathcal{C}\left(E,G\right)$
+\end_inset
+
+ tiene centro en 
+\begin_inset Formula $E$
+\end_inset
+
+ y pasa por 
+\begin_inset Formula $G$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $I$
+\end_inset
+
+ un punto que pasa por 
+\begin_inset Formula $\mathcal{C}\left(E,G\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\mathcal{C}\left(F,H\right)$
+\end_inset
+
+ .
+ 
+\end_layout
+
+\begin_layout Standard
+Por teorema 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "thm:circIgualPot"
+
+\end_inset
+
+, si una recta 
+\begin_inset Formula $r$
+\end_inset
+
+ cualquiera que pasa por 
+\begin_inset Formula $E$
+\end_inset
+
+ y corta a la circunferencia 
+\begin_inset Formula $ABC$
+\end_inset
+
+, será tangente a una circunferencia que pasa por 
+\begin_inset Formula $A$
+\end_inset
+
+ y por 
+\begin_inset Formula $B$
+\end_inset
+
+; y a una que pasa por 
+\begin_inset Formula $C$
+\end_inset
+
+ y 
+\begin_inset Formula $D$
+\end_inset
+
+, en un mismo punto 
+\begin_inset Formula $J$
+\end_inset
+
+ que estará en 
+\begin_inset Formula $\mathcal{C}\left(E,G\right)$
+\end_inset
+
+.
+ Por lo tanto las circunferencias 
+\begin_inset Formula $ABJ$
+\end_inset
+
+ y 
+\begin_inset Formula $CDJ$
+\end_inset
+
+ son tangentes.
+ La situación será en un todo similar considerando ahora los lados 
+\begin_inset Formula $AD$
+\end_inset
+
+ y 
+\begin_inset Formula $BC$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+El punto 
+\begin_inset Formula $I$
+\end_inset
+
+ es la intersección de cuatro circunferencias tangentes de a parejas.
+ 
+\end_layout
+
+\begin_layout Subsection
+Transformación de la circunferencia
+\end_layout
+
+\begin_layout Standard
+Una inversión 
+\begin_inset Formula $f$
+\end_inset
+
+ con respecto a una circunferencia que tenga centro en 
+\begin_inset Formula $I$
+\end_inset
+
+ y razón 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $1-\left|a\right|^{2}$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang spanish
+, donde 
+\begin_inset Formula $a$
+\end_inset
+
+ es la representación en complejos del punto 
+\begin_inset Formula $I$
+\end_inset
+
+, transformará los puntos 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+ 
+\begin_inset Formula $C$
+\end_inset
+
+ y 
+\begin_inset Formula $D$
+\end_inset
+
+ en los vértices de un paralelogramo inscribible, o sea en un rectángulo.
+ Sean 
+\begin_inset Formula $A_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $B_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $D_{1}$
+\end_inset
+
+ las imágenes por 
+\begin_inset Formula $f$
+\end_inset
+
+ de los puntos 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+, 
+\begin_inset Formula $C$
+\end_inset
+
+, y 
+\begin_inset Formula $D$
+\end_inset
+
+ respectivamente.
+ La representación analítica sería
+\begin_inset Formula 
+\begin{equation}
+f\left(z\right)=\frac{1-\left|a\right|^{2}}{\overline{z-a}}\label{eq:PrimeraInversión}
+\end{equation}
+
+\end_inset
+
+La elección un tanto sospechosa de la razón en 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:PrimeraInversión"
+
+\end_inset
+
+ se justifica haciendo los cálculos siguientes
+\begin_inset Formula 
+\[
+f\left(\frac{a}{\left|a\right|}\right)=\frac{1-\left|a\right|^{2}}{\overline{\frac{a}{\left|a\right|}-a}}=\frac{\left(1+\left|a\right|\right)\left|a\right|}{\overline{a}}=\frac{\left(1+\left|a\right|\right)a}{\left|a\right|}
+\]
+
+\end_inset
+
+y que
+\begin_inset Formula 
+\[
+f\left(-\frac{a}{\left|a\right|}\right)=\frac{1-\left|a\right|^{2}}{\overline{-\frac{a}{\left|a\right|}-a}}=-\frac{\left(1-\left|a\right|\right)\left|a\right|}{\overline{a}}=-\frac{\left(1-\left|a\right|\right)a}{\left|a\right|}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por lo tanto 
+\begin_inset Formula $\left|f\left(\frac{a}{\left|a\right|}\right)-f\left(-\frac{a}{\left|a\right|}\right)\right|=2$
+\end_inset
+
+ y 
+\begin_inset Formula $\frac{\left|f\left(\frac{a}{\left|a\right|}\right)+f\left(-\frac{a}{\left|a\right|}\right)\right|}{2}=a$
+\end_inset
+
+ .
+ Se deduce que 
+\begin_inset Formula $f$
+\end_inset
+
+ transforma la circunferencia unitaria en la circunferencia de centro en
+ 
+\begin_inset Formula $a$
+\end_inset
+
+ y de radio 1.
+ 
+\end_layout
+
+\begin_layout Standard
+La transformación 
+\begin_inset Formula $g=f-a$
+\end_inset
+
+, que es una traslación de la imagen de 
+\begin_inset Formula $f$
+\end_inset
+
+, transforma el círculo unitario en el exterior del círculo unitario.
+ Sean 
+\begin_inset Formula $A_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $B_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $D_{2}$
+\end_inset
+
+ las imágenes por 
+\begin_inset Formula $g$
+\end_inset
+
+ de los puntos 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+, 
+\begin_inset Formula $C$
+\end_inset
+
+, y 
+\begin_inset Formula $D$
+\end_inset
+
+ respectivamente.
+ 
+\begin_inset Formula $A_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $B_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $C_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $D_{2}$
+\end_inset
+
+ son los trasladados de 
+\begin_inset Formula $A_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $B_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $C_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $D_{1}$
+\end_inset
+
+, y por lo tanto también son los vértices de un rectángulo.
+ 
+\begin_inset Formula $g$
+\end_inset
+
+ se expresa analíticamente cómo 
+\begin_inset Formula 
+\[
+g\left(z\right)=\frac{1-\overline{z}a}{\overline{z}-\overline{a}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Por último, la transformación 
+\begin_inset Formula $h=\frac{1}{\overline{g}}$
+\end_inset
+
+ transforma el círculo unitario en el círculo unitario.
+ Nos queda que 
+\begin_inset Formula $h\left(z\right)$
+\end_inset
+
+ es 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:formBusc"
+
+\end_inset
+
+ que es la fórmula buscada.
+\end_layout
+
+\begin_layout Subsection
+Solución analítica
+\end_layout
+
+\begin_layout Standard
+Solamente necesitamos encontrar la representación de 
+\begin_inset Formula $a$
+\end_inset
+
+.
+ Sean 
+\begin_inset Formula $z_{1}$
+\end_inset
+
+, 
+\begin_inset Formula $z_{2}$
+\end_inset
+
+, 
+\begin_inset Formula $z_{3}$
+\end_inset
+
+, 
+\begin_inset Formula $z_{4}$
+\end_inset
+
+, 
+\begin_inset Formula $e$
+\end_inset
+
+ y 
+\begin_inset Formula $f$
+\end_inset
+
+ las coordenadas de 
+\begin_inset Formula $A$
+\end_inset
+
+, 
+\begin_inset Formula $B$
+\end_inset
+
+, 
+\begin_inset Formula $C$
+\end_inset
+
+, 
+\begin_inset Formula $D$
+\end_inset
+
+, 
+\begin_inset Formula $E$
+\end_inset
+
+ y 
+\begin_inset Formula $F$
+\end_inset
+
+ respectivamente.
+ Sean 
+\begin_inset Formula $x_{i}=\Re\left(z_{i}\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $y_{i}=\Im\left(z_{i}\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\left(1\leqslant i\leqslant4\right)$
+\end_inset
+
+.
+ Debemos primero resolver la ecuación
+\begin_inset Formula 
+\begin{equation}
+z_{4}+t\left(z_{3}-z_{4}\right)=z_{2}+s\left(z_{1}-z_{2}\right)\label{eq:Encontrare}
+\end{equation}
+
+\end_inset
+
+que nos lleva a encontrar 
+\begin_inset Formula $f$
+\end_inset
+
+.
+ Hagamos 
+\begin_inset Formula $x_{ij}=x_{i}-x_{j}$
+\end_inset
+
+ y 
+\begin_inset Formula $y_{ij}=y_{i}-y_{j}$
+\end_inset
+
+.
+ En estos términos 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:Encontrare"
+
+\end_inset
+
+ queda 
+\begin_inset Formula 
+\begin{align*}
+x_{42} & =tx_{43}+sx_{12}\\
+y_{42} & =ty_{43}+sy_{12}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hagamos
+\begin_inset Formula 
+\[
+u=-\frac{\left|\begin{array}{cc}
+x_{42} & x_{12}\\
+y_{42} & y_{12}
+\end{array}\right|}{\left|\begin{array}{cc}
+x_{43} & x_{12}\\
+y_{43} & y_{12}
+\end{array}\right|}
+\]
+
+\end_inset
+
+entonces 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+
+\begin_inset Formula $z_{4}+u\left(z_{3}-z_{4}\right)=f$
+\end_inset
+
+ y, con
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang spanish
+ un procedimiento similar, encontraremos 
+\begin_inset Formula $e$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+Con los valores de 
+\begin_inset Formula $e$
+\end_inset
+
+ y 
+\begin_inset Formula $f$
+\end_inset
+
+ solamente resta encontrar el valor de 
+\begin_inset Formula $a$
+\end_inset
+
+ que surge de la ecuaciones 
+\begin_inset Formula 
+\begin{align*}
+x^{2}+y^{2}-2e_{1}x-2e_{2}y+1 & =0\\
+x^{2}+y^{2}-2f_{1}x-2f_{2}y+1 & =0
+\end{align*}
+
+\end_inset
+
+que a su vez obtuvimos de la forma en que construimos 
+\begin_inset Formula $a$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Conclusiones
+\end_layout
+
+\begin_layout Standard
+Cuando puede encararse un problema de más de una forma, suele aumentarse
+ la riqueza de los conceptos que se puede obtener.
+ 
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Referencias
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Co"
+key "Coxeter"
+
+\end_inset
+
+Coxeter H.S.M, S.L Greitzer.
+ Retorno a la Geometría.
+ La Tortuga de Aquiles.
+ 1993.
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Referencias
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Ar"
+key "Arias"
+
+\end_inset
+
+Arias, M.
+ V.
+ Sángari, A.
+ Construcciones con solo compás.
+ volumen 27.
+ Recuperado de http://www.famaf.unc.edu.ar/rev_edu/#rev_intro 
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Referencias
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Wu"
+key "Wunsch"
+
+\end_inset
+
+Wunsch A.
+ D.
+ Variable Compleja con Aplicaciones.
+ Addison-Wesley Iberoamericana.
+ 1997
+\end_layout
+
+\begin_layout Bibliography
+\labelwidthstring Referencias
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "Pa"
+key "Papamichael"
+
+\end_inset
+
+Papamichael, N.
+ Stylianopoulos, N.
+ Numerical Comformal Mapping.
+ World Scientific.
+ 2010.
+\end_layout
+
+\end_body
+\end_document
