@@ -1,0 +1,2229 @@
+#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\begin_preamble
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsfonts}
+
+%TCIDATA{OutputFilter=LATEX.DLL}
+%TCIDATA{Version=5.50.0.2953}
+%TCIDATA{<META NAME="SaveForMode" CONTENT="1">}
+%TCIDATA{BibliographyScheme=Manual}
+%TCIDATA{Created=Monday, September 10, 2007 11:32:14}
+%TCIDATA{LastRevised=Friday, June 08, 2012 16:15:33}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Standard LaTeX\Blank - Standard LaTeX Article">}
+%TCIDATA{CSTFile=article.cst}
+%TCIDATA{PageSetup=71,71,71,71,0}
+%TCIDATA{ComputeDefs=
+%$f\left( x,y\right) =\left\{ 
+%\begin{array}{cc}
+%\frac{x^{2}y}{\sqrt{x^{2}+y^{2}}} & \text{si }\overline{x}\neq \overline{0}
+%\\ 
+%0 & \text{si }\overline{x}=\overline{0}%
+%\end{array}%
+%\right. \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ g\left( x,y\right) =\left\{ 
+%\begin{array}{cc}
+%\dfrac{xy^{2}}{x^{2}+y^{4}} & \text{si }\overline{x}\neq \overline{0} \\ 
+%0 & \text{si }\overline{x}=\overline{0}%
+%\end{array}%
+%\right. $
+%}
+%TCIDATA{AllPages=
+%H=36
+%F=36
+%}
+
+
+\newtheorem{theorem}{Theorem}\newtheorem{acknowledgement}[theorem]{Acknowledgement}\newtheorem{algorithm}[theorem]{Algorithm}\newtheorem{axiom}[theorem]{Axiom}\newtheorem{case}[theorem]{Case}\newtheorem{claim}[theorem]{Claim}\newtheorem{conclusion}[theorem]{Conclusion}\newtheorem{condition}[theorem]{Condition}\newtheorem{conjecture}[theorem]{Conjecture}\newtheorem{corollary}[theorem]{Corollary}\newtheorem{criterion}[theorem]{Criterion}\newtheorem{definition}[theorem]{Definition}\newtheorem{example}[theorem]{Example}\newtheorem{exercise}[theorem]{Exercise}\newtheorem{lemma}[theorem]{Lemma}\newtheorem{notation}[theorem]{Notation}\newtheorem{problem}[theorem]{Problem}\newtheorem{proposition}[theorem]{Proposition}\newtheorem{remark}[theorem]{Remark}\newtheorem{solution}[theorem]{Solution}\newtheorem{summary}[theorem]{Summary}\newenvironment{proof}[1][Proof]{\noindent\textbf{#1.} }{\ \rule{0.5em}{0.5em}}\topmargin=-2cm\oddsidemargin=0cm\textwidth=16cm\textheight=26cm\renewcommand{\baselinestretch}{1.5}\input{tcilatex}
+\end_preamble
+\use_default_options false
+\language spanish
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize a4paper
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Title
+
+\series bold
+OPTIMIZACIÓN SIN CÁLCULO DIFERENCIAL
+\end_layout
+
+\begin_layout Author
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+underline{
+\backslash
+textbf{Cristina Eg
+\backslash
+"{u}ez
+\backslash
+ }}
+\end_layout
+
+\end_inset
+
+
+\series bold
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\series default
+ 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+underline{
+\backslash
+textbf{Antonio S
+\backslash
+'{a}ngari}}
+\end_layout
+
+\end_inset
+
+
+\series bold
+
+\begin_inset space \space{}
+\end_inset
+
+
+\series default
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+and
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+%EndAName
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\series bold
+Facultad de Ciencias Exactas.
+ Universidad Nacional de Salta
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\series bold
+Consejo de Investigación de la Universidad Nacional de Salta
+\series default
+
+\begin_inset Newline newline
+\end_inset
+
+ 
+\series bold
+criseguez2000@gmail.com
+\end_layout
+
+\begin_layout Date
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Categoría:
+\series default
+ Reflexiones
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Nivel Educativo:
+\series default
+ Universitario
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Palabras claves
+\series default
+: tetraedro - área mínima - optimización - triángulo medial
+\end_layout
+
+\begin_layout Standard
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\begin_inset space \space{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+RESUMEN
+\series default
+ 
+\end_layout
+
+\begin_layout Standard
+Los problemas de optimización se pueden, por regla general, reducir al estudio
+ de una función en forma analítica y muchas veces el cálculo se hace tedioso.
+ Aquí presentamos la resolución de problemas de área y volúmen mínimos,
+ en el plano y en el espacio, a través de razonamientos geométricos interesantes
+ que permiten alcanzar el objetivo más rápidamente y formular algunas conjeturas.
+\end_layout
+
+\begin_layout Section
+Fundamentación
+\end_layout
+
+\begin_layout Standard
+En un trabajo anterior
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Sángari, A.
+ Egüez, C.
+ Una síntesis del cálculo y la geometría: Localización del Punto de Fermat.
+ Revista de Educación Matemática.
+ Vol 27.1 Recuperado de http://www.famaf.unc.edu.ar/rev_edu/#rev_intro_volumen
+ (2012).
+\end_layout
+
+\end_inset
+
+ enfatizamos la importancia de resolver problemas del cálculo diferencial,
+ siempre que se pueda, de más de una forma.
+ En esta oportunidad, presentamos una serie de pasos para resolver problemas
+ de optimización relacionados con triángulos y prismas sin hacer uso del
+ cálculo diferencial, como se haría habitualmente, y encontrando caminos
+ interesantes a través de la geometría elemental.
+ La aplicación de la condición suficiente para la resolución del problema
+ de minimizar el volumen de un tetraedro apoyado en los planos coordenados
+ y que pase por un punto del primer octante, nos llevó a intentar una resolución
+ por medios geométricos a fin de evitar el tedio de los cálculos pertinentes.
+ Esto a su vez, nos condujo a formular algunas conjeturas y a resolver nuevos
+ planteos.geométricos y de optimización más generales.
+ De esta manera surgió el presente trabajo que muestra resoluciones geométricas
+ de minimización.
+\end_layout
+
+\begin_layout Section
+Area mínima de un triángulo a partir de un ángulo y un punto del lado opuesto
+\end_layout
+
+\begin_layout Subsection
+Problema 1.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Sea 
+\emph default
+
+\begin_inset Formula $A$
+\end_inset
+
+
+\emph on
+
+\begin_inset space \space{}
+\end_inset
+
+un punto del primer cuadrante.
+ Entre todos los triángulos que tienen al punto 
+\emph default
+
+\begin_inset Formula $A$
+\end_inset
+
+
+\emph on
+
+\begin_inset space \space{}
+\end_inset
+
+en uno de sus lados, y los lados restantes sobre los ejes de coordenadas,
+ encontrar el de menor área.
+\end_layout
+
+\begin_layout Subsubsection
+Análisis previo
+\end_layout
+
+\begin_layout Standard
+¿Qué información nos suministra el enunciado?
+\end_layout
+
+\begin_layout Description
+a.
+ El punto 
+\begin_inset Formula $A$
+\end_inset
+
+ tiene coordenadas 
+\begin_inset Formula $\left(a,b\right)$
+\end_inset
+
+ con 
+\begin_inset Formula $a,b>0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+b.
+ El triángulo es rectángulo y 
+\begin_inset Formula $A$
+\end_inset
+
+ y está sobre la hipotenusa.
+\end_layout
+
+\begin_layout Description
+c.
+ Uno de los vértices es el punto 
+\begin_inset Formula $\left(0,0\right)$
+\end_inset
+
+.y los otros son 
+\begin_inset Formula $\left(x,0\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\left(0,y\right)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+¿Cuál es el objetivo?
+\series bold
+
+\begin_inset space \space{}
+\end_inset
+
+
+\series default
+Encontrar los vértices 
+\begin_inset Formula $\left(x,0\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\left(0,y\right)$
+\end_inset
+
+ del triángulo.
+\end_layout
+
+\begin_layout Subsubsection
+Subproblema 1.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+A partir de las condiciones a, b y c, mostrar que si 
+\emph default
+
+\begin_inset Formula $A$
+\end_inset
+
+
+\emph on
+
+\begin_inset space \space{}
+\end_inset
+
+no es punto medio de la hipotenusa, siempre es posible construir otro triángulo
+ de área menor.
+\end_layout
+
+\begin_layout Standard
+Tomemos un punto 
+\begin_inset Formula $A$
+\end_inset
+
+ de coordenadas 
+\begin_inset Formula $\left(a,b\right)$
+\end_inset
+
+ como en la figura 1.
+ Sea el triángulo 
+\begin_inset Formula $OED$
+\end_inset
+
+ de tal modo que el segmento 
+\begin_inset Formula $AE$
+\end_inset
+
+ sea mayor que el segmento 
+\begin_inset Formula $AD$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $D^{\prime}$
+\end_inset
+
+ el simétrico de 
+\begin_inset Formula $D$
+\end_inset
+
+ con respecto al punto 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $B$
+\end_inset
+
+ el punto de intersección de la abscisa con su perpendicular desde 
+\begin_inset Formula $D$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $C$
+\end_inset
+
+ la intersección de la recta 
+\begin_inset Formula $AB$
+\end_inset
+
+ con la ordenada.
+ Notemos que los triángulos 
+\begin_inset Formula $ACD$
+\end_inset
+
+ y 
+\begin_inset Formula $ABD^{\prime}$
+\end_inset
+
+ son congruentes y por tanto 
+\begin_inset Formula $OBC$
+\end_inset
+
+ es menor
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Diremos mayor para denotar mayor área o mayor volumen cuando en el contexto
+ esto esté claro.
+ Análogamente para menor.
+\end_layout
+
+\end_inset
+
+ que 
+\begin_inset Formula $OED$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename TriCoorFig1.PNG
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Resumiendo, tenemos un método para construir triángulos menores, que cumplen
+ las condiciones del problema 1, siempre y cuando 
+\begin_inset Formula $A$
+\end_inset
+
+ no sea el punto medio de la hipotenusa.
+ Si el segmento 
+\begin_inset Formula $DA$
+\end_inset
+
+ fuera mayor que el 
+\begin_inset Formula $AE$
+\end_inset
+
+, el procedimiento sería similar.
+\end_layout
+
+\begin_layout Standard
+Hemos probado que si 
+\begin_inset Formula $A$
+\end_inset
+
+ no es punto medio de la hipotenusa siempre es posible hallar uno menor.
+ Ahora vamos a probar que si 
+\begin_inset Formula $A$
+\end_inset
+
+ es punto medio de la hipotenusa cualquier otro es mayor.
+\end_layout
+
+\begin_layout Subsubsection
+Subproblema 2.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Sea 
+\emph default
+
+\begin_inset Formula $BOC$
+\end_inset
+
+
+\emph on
+
+\begin_inset space \space{}
+\end_inset
+
+un triángulo que tiene el ángulo recto en 
+\emph default
+
+\begin_inset Formula $O$
+\end_inset
+
+ 
+\emph on
+y el punto 
+\emph default
+
+\begin_inset Formula $A$
+\end_inset
+
+
+\emph on
+
+\begin_inset space \space{}
+\end_inset
+
+sobre la hipotenusa 
+\emph default
+
+\begin_inset Formula $BC$
+\end_inset
+
+
+\emph on
+.
+ Mostrar que el triángulo de menor área es el que tiene a 
+\emph default
+
+\begin_inset Formula $A$
+\end_inset
+
+
+\emph on
+
+\begin_inset space \space{}
+\end_inset
+
+como punto medio de la hipotenusa
+\emph default
+
+\begin_inset Formula $.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sea 
+\begin_inset Formula $DOE$
+\end_inset
+
+ un ángulo recto tal que 
+\begin_inset Formula $A$
+\end_inset
+
+ está en la hipotenusa 
+\begin_inset Formula $DE$
+\end_inset
+
+ y no es punto medio.
+ Dado que los segmentos 
+\begin_inset Formula $BC$
+\end_inset
+
+ y 
+\begin_inset Formula $DE$
+\end_inset
+
+ se cortan en 
+\begin_inset Formula $A$
+\end_inset
+
+, uno de los puntos 
+\begin_inset Formula $D$
+\end_inset
+
+ o 
+\begin_inset Formula $E$
+\end_inset
+
+ quedará en el semiplano opuesto al que contiene al triángulo 
+\begin_inset Formula $OBC$
+\end_inset
+
+ respecto de 
+\begin_inset Formula $BC$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $B$
+\end_inset
+
+ está entre 
+\begin_inset Formula $O$
+\end_inset
+
+ y 
+\begin_inset Formula $E$
+\end_inset
+
+, y trazamos por 
+\begin_inset Formula $B$
+\end_inset
+
+ una recta 
+\begin_inset Formula $r$
+\end_inset
+
+ paralela a 
+\begin_inset Formula $OC$
+\end_inset
+
+.
+ Podemos probar que 
+\begin_inset Formula $r$
+\end_inset
+
+ siempre cortará al segmento 
+\begin_inset Formula $AE$
+\end_inset
+
+ en un punto 
+\begin_inset Formula $D^{\prime}$
+\end_inset
+
+, como observamos en la figura 1.
+ De esta manera siempre es posible obtener un triángulo 
+\begin_inset Formula $ABD^{\prime}$
+\end_inset
+
+ congruente con 
+\begin_inset Formula $ACD$
+\end_inset
+
+ y un triágulo 
+\begin_inset Formula $BED^{\prime}$
+\end_inset
+
+ tal que, en relación a las áreas, 
+\begin_inset Formula $DOE-BOC=ACD$
+\end_inset
+
+.
+ Luego, 
+\begin_inset Formula $DOE$
+\end_inset
+
+ es mayor que 
+\begin_inset Formula $BOC$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Una pequeña digresión
+\end_layout
+
+\begin_layout Standard
+Una mirada más cuidadosa al procedimiento usado anteriormente, nos lleva
+ a notar que en ningún momento necesitamos hacer uso del ángulo recto en
+ 
+\begin_inset Formula $O$
+\end_inset
+
+, por tanto podemos conjeturar que este resultado es válido para cualquier
+ triángulo.
+ De esto, surge el teorema de la sesión 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "2"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Subproblema 3.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Sea 
+\emph default
+
+\begin_inset Formula $OBC$
+\end_inset
+
+ 
+\emph on
+un triángulo que tiene a 
+\emph default
+
+\begin_inset Formula $A=\left(a,b\right)$
+\end_inset
+
+
+\emph on
+
+\begin_inset space \space{}
+\end_inset
+
+como punto medio de uno de sus lados, y los lados restantes sobre los ejes
+ de coordenadas, hallar los vértices 
+\emph default
+
+\begin_inset Formula $\left(x,0\right)$
+\end_inset
+
+ 
+\emph on
+e
+\emph default
+ 
+\begin_inset Formula $\left(0,y\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Sean 
+\begin_inset Formula $A_{1}=\left(a,0\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $A_{2}=\left(0,b\right)$
+\end_inset
+
+.
+ Por ser 
+\begin_inset Formula $A$
+\end_inset
+
+ punto medio del segmento 
+\begin_inset Formula $BC$
+\end_inset
+
+ (figura 1), 
+\begin_inset Formula $A_{2}A$
+\end_inset
+
+ es base media de 
+\begin_inset Formula $OBC$
+\end_inset
+
+, luego, 
+\begin_inset Formula $x=2a$
+\end_inset
+
+ y 
+\begin_inset Formula $B=\left(2a,c\right)$
+\end_inset
+
+, análogamente, usando el punto 
+\begin_inset Formula $A_{2}$
+\end_inset
+
+, obtenemos 
+\begin_inset Formula $C=\left(0,2b\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsection
+Teorema del triángulo de área mínima
+\begin_inset CommandInset label
+LatexCommand label
+name "2"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+
+\series bold
+Teorema 1
+\series default
+ 
+\emph on
+Sea un ángulo 
+\emph default
+
+\begin_inset Formula $A$
+\end_inset
+
+
+\emph on
+
+\begin_inset space \space{}
+\end_inset
+
+y un punto 
+\emph default
+
+\begin_inset Formula $A^{\prime}$
+\end_inset
+
+
+\emph on
+
+\begin_inset space \space{}
+\end_inset
+
+en el interior de 
+\emph default
+
+\begin_inset Formula $A$
+\end_inset
+
+
+\emph on
+.
+ De todos los triángulos que comparten el ángulo 
+\emph default
+
+\begin_inset Formula $A$
+\end_inset
+
+
+\emph on
+
+\begin_inset space \space{}
+\end_inset
+
+y que el lado opuesto 
+\emph default
+
+\begin_inset Formula $BC$
+\end_inset
+
+
+\emph on
+
+\begin_inset space \space{}
+\end_inset
+
+contiene a 
+\emph default
+
+\begin_inset Formula $A^{\prime}$
+\end_inset
+
+
+\emph on
+, el de menor área es el que tiene a 
+\emph default
+
+\begin_inset Formula $A^{\prime}$
+\end_inset
+
+
+\emph on
+
+\begin_inset space \space{}
+\end_inset
+
+como punto medio de 
+\emph default
+
+\begin_inset Formula $BC$
+\end_inset
+
+
+\emph on
+.
+
+\emph default
+ 
+\end_layout
+
+\begin_layout Standard
+Primero mostraremos la existencia de tal triágulo y luego justificaremos
+ que es el de área mínima.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Prueba de la existencia del triángulo.
+ 
+\series default
+Sea 
+\begin_inset Formula $A$
+\end_inset
+
+ el vértice del ángulo dado y 
+\begin_inset Formula $A^{\prime}$
+\end_inset
+
+ el punto del lado opuesto, tracemos por 
+\begin_inset Formula $A^{\prime}$
+\end_inset
+
+ rectas paralelas a los lados del ángulo y determinemos los puntos 
+\begin_inset Formula $C^{\prime}$
+\end_inset
+
+ y 
+\begin_inset Formula $B^{\prime}$
+\end_inset
+
+ como en la figura 2.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename TriMedFig2.PNG
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tracemos por 
+\begin_inset Formula $A^{\prime}$
+\end_inset
+
+ una paralela 
+\begin_inset Formula $r$
+\end_inset
+
+ a 
+\begin_inset Formula $B^{\prime}C^{\prime}$
+\end_inset
+
+.
+ Los puntos 
+\begin_inset Formula $B$
+\end_inset
+
+ y 
+\begin_inset Formula $C$
+\end_inset
+
+ del triángulo son la intersección de 
+\begin_inset Formula $r$
+\end_inset
+
+ con cada uno de los lados del ángulo dado.
+\end_layout
+
+\begin_layout Standard
+De los paralelogramos 
+\begin_inset Formula $A^{\prime}CB^{\prime}C^{\prime}$
+\end_inset
+
+ y 
+\begin_inset Formula $A^{\prime}BC^{\prime}B^{\prime}$
+\end_inset
+
+, deducimos que 
+\begin_inset Formula $A^{\prime}$
+\end_inset
+
+ es el punto medio de 
+\begin_inset Formula $BC$
+\end_inset
+
+.
+ Análogmente se observa para los otros ángulos.
+ Esta es una propiedad de la base media y del triágulo medial.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Prueba del área mínima.
+ 
+\series default
+Supongamos un triángulo 
+\begin_inset Formula $ADE$
+\end_inset
+
+ genérico tal que 
+\begin_inset Formula $A^{\prime}$
+\end_inset
+
+ está en 
+\begin_inset Formula $DE$
+\end_inset
+
+, como en la figura 3.
+ Dado que los segmentos 
+\begin_inset Formula $BC$
+\end_inset
+
+ y 
+\begin_inset Formula $DE$
+\end_inset
+
+ se cortan en 
+\begin_inset Formula $A^{\prime}$
+\end_inset
+
+, 
+\begin_inset space \space{}
+\end_inset
+
+los puntos 
+\begin_inset Formula $D$
+\end_inset
+
+ y 
+\begin_inset Formula $E$
+\end_inset
+
+ no estan en el mismo semiplano respecto de la recta 
+\begin_inset Formula $BC$
+\end_inset
+
+.
+ Supongamos que 
+\begin_inset Formula $B$
+\end_inset
+
+ está entre 
+\begin_inset Formula $A$
+\end_inset
+
+ y 
+\begin_inset Formula $E$
+\end_inset
+
+, así, el ángulo 
+\begin_inset Formula $A^{\prime}BE$
+\end_inset
+
+ es exterior del triángulo 
+\begin_inset Formula $ABC$
+\end_inset
+
+.
+ Si trazamos por 
+\begin_inset Formula $B$
+\end_inset
+
+ una paralela a 
+\begin_inset Formula $AC$
+\end_inset
+
+, podemos probar que esta recta 
+\begin_inset space \space{}
+\end_inset
+
+siempre cortará al segmento 
+\begin_inset Formula $A^{\prime}E$
+\end_inset
+
+ en un punto 
+\begin_inset Formula $D^{\prime}$
+\end_inset
+
+.
+ De esta manera, siempre es posible obtener el triángulo 
+\begin_inset Formula $A^{\prime}BD^{\prime}$
+\end_inset
+
+ congruente con 
+\begin_inset Formula $ACD,$
+\end_inset
+
+ y el triángulo 
+\begin_inset Formula $D^{\prime}BE$
+\end_inset
+
+, tal que, en relación a las áreas, 
+\begin_inset Formula $ADE-ABC=$
+\end_inset
+
+ 
+\begin_inset Formula $D^{\prime}BE$
+\end_inset
+
+.
+ Luego 
+\begin_inset Formula $ADE$
+\end_inset
+
+ es mayor que 
+\begin_inset Formula $ABC$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/cristina/Documentos/REM2012/Optimizacion/TriGenFig3.png
+	scale 60
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Volumen mínimo de un tetraedro apoyado en los planos coordenados
+\end_layout
+
+\begin_layout Subsection
+Problema 2.
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Sea 
+\emph default
+
+\begin_inset Formula $A$
+\end_inset
+
+
+\emph on
+
+\begin_inset space \space{}
+\end_inset
+
+un punto del primer octante.
+ Entre todos los tetraedros que tienen al punto 
+\emph default
+
+\begin_inset Formula $A$
+\end_inset
+
+
+\emph on
+
+\begin_inset space \space{}
+\end_inset
+
+en una de sus caras, y los caras restantes sobre los plano coordenados,
+ encontrar el de menor área.
+\end_layout
+
+\begin_layout Subsection
+Análisis previo
+\end_layout
+
+\begin_layout Standard
+Observamos que este problema es una extensión del problema 1 al espacio
+ tridimensional.
+ Por tanto podemos realizar un procedimiento análogo al anterior.y utilizar
+ algunos resultados.
+ Ahora, nuestro objetivo es encontrar los vértices
+\emph on
+
+\begin_inset space \space{}
+\end_inset
+
+
+\emph default
+
+\begin_inset Formula $\left(x,0,0\right)$
+\end_inset
+
+
+\emph on
+, 
+\emph default
+
+\begin_inset Formula $\left(0,y,0\right)$
+\end_inset
+
+,
+\emph on
+
+\begin_inset space \space{}
+\end_inset
+
+
+\emph default
+
+\begin_inset Formula $\left(0,0,z\right)$
+\end_inset
+
+ del tetraedro.
+\end_layout
+
+\begin_layout Subsection
+Subproblema 1
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+A partir de las condiciones del problema 2, mostrar que el tetraedro de
+ menor volumen es que tiene al punto 
+\emph default
+
+\begin_inset Formula $A$
+\end_inset
+
+ 
+\emph on
+como baricentro de la cara que lo contiene.
+\end_layout
+
+\begin_layout Standard
+Sea el tetraedro 
+\begin_inset Formula $OPQR$
+\end_inset
+
+ como en la figura 4, mostremos que 
+\begin_inset Formula $A$
+\end_inset
+
+ es el baricentro del triángulo 
+\begin_inset Formula $PQR.$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename /home/cristina/Documentos/REM2012/Optimizacion/tetra1.wmf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Caso 1.
+ Los tetraedros tienen la misma altura
+\end_layout
+
+\begin_layout Standard
+Consideremos los tetraedros 
+\begin_inset Formula $OPQR$
+\end_inset
+
+ y 
+\begin_inset Formula $OSTR$
+\end_inset
+
+ de la figura 4, ambos tienen la misma altura 
+\begin_inset Formula $OR$
+\end_inset
+
+ y contienen al punto 
+\begin_inset Formula $A$
+\end_inset
+
+ en la cara opuesta a 
+\begin_inset Formula $O$
+\end_inset
+
+ y 
+\begin_inset Formula $A$
+\end_inset
+
+ es el baricentro de 
+\begin_inset Formula $PQR$
+\end_inset
+
+.
+ Si 
+\begin_inset Formula $R^{\prime}$
+\end_inset
+
+ el punto medio de 
+\begin_inset Formula $PQ$
+\end_inset
+
+, el segmento 
+\begin_inset Formula $RR^{\prime}$
+\end_inset
+
+ pertenece a ambos tetraedros.
+ Aplicando el teorema anterior, 
+\begin_inset Formula $OPQ$
+\end_inset
+
+ es menor que 
+\begin_inset Formula $OST$
+\end_inset
+
+ y por tener la misma altura 
+\begin_inset Formula $OPQR$
+\end_inset
+
+ es menor que 
+\begin_inset Formula $OSTR$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Si tres caras se apoyan sobre los panos coordenados y el baricentro está
+ en la opuesta al origen de coordenadas, por propiedad de las medianas,
+ resulta que si 
+\begin_inset Formula $A$
+\end_inset
+
+ tiene coordenadas 
+\begin_inset Formula $\left(a,b,c\right),$
+\end_inset
+
+ las coordenadas de los vértices restantes del tetraedro son 
+\begin_inset Formula $\left(3a,0,0\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\left(0,3b,0\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(0,0,3c\right)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+\series bold
+Caso 2.
+ Los tetraedros tienen alturas diferentes
+\end_layout
+
+\begin_layout Standard
+Ahora, consideremos los tetraedros con altura diferente, 
+\begin_inset Formula $OPQR$
+\end_inset
+
+ y 
+\begin_inset Formula $OSTU$
+\end_inset
+
+, con 
+\begin_inset Formula $U$
+\end_inset
+
+ está entre 
+\begin_inset Formula $O$
+\end_inset
+
+ y 
+\begin_inset Formula $R$
+\end_inset
+
+, como en la figura5.
+ Podemos probar que la recta 
+\begin_inset Formula $UA$
+\end_inset
+
+ corta al plano 
+\begin_inset Formula $OPQ$
+\end_inset
+
+ en un punto 
+\begin_inset Formula $U^{\prime}$
+\end_inset
+
+ que está del otro lado de la recta 
+\begin_inset Formula $PQ$
+\end_inset
+
+ que 
+\begin_inset Formula $O$
+\end_inset
+
+.
+ Tracemos por 
+\begin_inset Formula $U^{\prime}$
+\end_inset
+
+ una recta 
+\begin_inset Formula $r$
+\end_inset
+
+ paralela a 
+\begin_inset Formula $PQ$
+\end_inset
+
+.
+ Sean 
+\begin_inset Formula $K$
+\end_inset
+
+ y 
+\begin_inset Formula $L\ $
+\end_inset
+
+ las intersecciones de 
+\begin_inset Formula $r$
+\end_inset
+
+ con las rectas 
+\begin_inset Formula $OP$
+\end_inset
+
+ y 
+\begin_inset Formula $OQ$
+\end_inset
+
+ respectivamente.
+ Como 
+\begin_inset Formula $OPQ$
+\end_inset
+
+ y 
+\begin_inset Formula $OKL$
+\end_inset
+
+ son semejantes, 
+\begin_inset Formula $U^{\prime}$
+\end_inset
+
+ es punto medio de 
+\begin_inset Formula $KL$
+\end_inset
+
+, por estar en la semirrecta 
+\begin_inset Formula $OR^{\prime}$
+\end_inset
+
+.
+ Entonces, por el teorema anterior 
+\begin_inset Formula $OST$
+\end_inset
+
+ es mayor que 
+\begin_inset Formula $OKL$
+\end_inset
+
+, y por tanto 
+\begin_inset Formula $OSTU$
+\end_inset
+
+ es mayor que 
+\begin_inset Formula $OKLU$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename tetra2.wmf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Tendríamos que probar ahora, que 
+\begin_inset Formula $OKLU$
+\end_inset
+
+ es mayor que 
+\begin_inset Formula $OPQR$
+\end_inset
+
+, para ello consideremos la figura 6, donde 
+\begin_inset Formula $GHI$
+\end_inset
+
+ es paralelo a las bases y pasa por 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Sea 
+\begin_inset Formula $V_{a}$
+\end_inset
+
+ el volumen de la pirámide 
+\begin_inset Formula $OPQR$
+\end_inset
+
+ y 
+\begin_inset Formula $V_{b}$
+\end_inset
+
+ el volumen de 
+\begin_inset Formula $OKLU$
+\end_inset
+
+.
+ Dado que 
+\begin_inset Formula $A$
+\end_inset
+
+ es el baricentro de la cara frontal 
+\begin_inset Formula $PQR$
+\end_inset
+
+ y considerando que las medianas se cortan en una relación 
+\begin_inset Formula $2:1$
+\end_inset
+
+, el volumen de 
+\begin_inset Formula $IGHB$
+\end_inset
+
+ es 
+\begin_inset Formula $\frac{8}{27}V_{a}$
+\end_inset
+
+ y el volumen de 
+\begin_inset Formula $IGHU$
+\end_inset
+
+ es menor que 
+\begin_inset Formula $\frac{8}{27}V_{b}$
+\end_inset
+
+, porque el baricentro de la cara 
+\begin_inset Formula $UKL$
+\end_inset
+
+ se encuentra por debajo de 
+\begin_inset Formula $A$
+\end_inset
+
+.
+ Así, la pirámide truncada 
+\begin_inset Formula $ORQGHI$
+\end_inset
+
+ tiene volumen igual a 
+\begin_inset Formula $\frac{19}{27}V_{a}$
+\end_inset
+
+ y la pirámide truncada 
+\begin_inset Formula $OKLGHI$
+\end_inset
+
+ tiene volumen mayor que 
+\begin_inset Formula $\frac{19}{27}V_{b}$
+\end_inset
+
+.
+ De esto deducimos que la diferencia de parte inferior entre las pirámides,
+ 
+\begin_inset Formula $GKPLQH$
+\end_inset
+
+, tiene volumen mayor que 
+\begin_inset Formula $\left\vert \frac{19}{27}V_{a}-\frac{19}{27}V_{b}\right\vert $
+\end_inset
+
+.
+ Así también la diferencia superior entre las pirámides, 
+\begin_inset Formula $RGUH$
+\end_inset
+
+ tiene volumen menor que 
+\begin_inset Formula $\left\vert \frac{8}{27}V_{a}-\frac{8}{27}V_{b}\right\vert $
+\end_inset
+
+.
+ Entonces: 
+\begin_inset Formula \[
+OKLGHI>\frac{19}{27}\left\vert V_{a}-V_{b}\right\vert >\frac{8}{27}\left\vert V_{a}-V_{b}\right\vert >RGUH\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename terta3.wmf
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\FRAME{itbpFU}{6.1125in}{4.0811in}{0in}{\Qcb{Figura6}}{}{terta3.wmf}{\special{language"ScientificWord";type"GRAPHIC";maintain-aspect-ratioTRUE;display"USEDEF";valid_{f}ile"F";width6.1125in;height4.0811in;depth0in;original-width6.052in;original-height4.0309in;cropleft"0";croptop"1";cropright"1";cropbottom"0";filename'F:/Optimizacion/terta3.wmf';file-properties"XNPEUR";}}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La desigualdad anterior implica que 
+\begin_inset Formula $OKLU$
+\end_inset
+
+ es mayor que 
+\begin_inset Formula $OPQR$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Nos quedaría solamente el caso de la pirámide de altura mayor, pero esta
+ se convierte rápidamente el una de altura menor considerando otra de las
+ bases.
+\end_layout
+
+\begin_layout Subsubsection
+Subproblema 2
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Hallar los vértices del tetraedro con volumen mínimo, bajo las condiciones
+ del problema 1.
+\end_layout
+
+\begin_layout Standard
+Dado que tres caras se apoyan sobre los panos coordenados y el baricentro
+ está en la opuesta al origen de coordenadas, por propiedad de que las medians
+ se cortan en una relación 
+\begin_inset Formula $2:1$
+\end_inset
+
+, resulta que si 
+\begin_inset Formula $A$
+\end_inset
+
+ tiene coordenadas 
+\begin_inset Formula $\left(a,b,c\right),$
+\end_inset
+
+ las coordenadas de los vértices restantes del tetraedro son 
+\begin_inset Formula $\left(3a,0,0\right)$
+\end_inset
+
+, 
+\begin_inset Formula $\left(0,3b,0\right)$
+\end_inset
+
+ y 
+\begin_inset Formula $\left(0,0,3c\right)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Teorema del tetraedro de volumen mínimo
+\end_layout
+
+\begin_layout Standard
+Esta demostración no requirió del hecho de que las caras estén en los planos
+ coordenados, por tanto tambien puede se puede generalizar mediante el siguiente
+ teorema.
+\end_layout
+
+\begin_layout Description
+Teorema 2 
+\emph on
+Si 
+\emph default
+
+\begin_inset Formula $A$
+\end_inset
+
+ 
+\emph on
+es un punto interior de un triedro de vértice 
+\emph default
+
+\begin_inset Formula $O$
+\end_inset
+
+
+\emph on
+.
+ De todos los tetraedros que comparten este triedro y que la cara opuesta
+ a 
+\emph default
+
+\begin_inset Formula $O$
+\end_inset
+
+
+\emph on
+
+\begin_inset space \space{}
+\end_inset
+
+contiene a 
+\emph default
+
+\begin_inset Formula $A$
+\end_inset
+
+
+\emph on
+, el de menor área es el que tiene al punto 
+\emph default
+
+\begin_inset Formula $A$
+\end_inset
+
+
+\emph on
+
+\begin_inset space \space{}
+\end_inset
+
+como baricentro de la cara opuesta a 
+\emph default
+
+\begin_inset Formula $O.$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Section
+Conclusión
+\end_layout
+
+\begin_layout Standard
+Los problemas 1 y 2 se enfocan clásicamente en un curso de análisis de varias
+ variables usando el método de los multilpicadores de Lagrange.
+ También son resolubles analíticamente a través de composición de funciones
+ y de curvas de nivel.
+ En este trabajo aprovechamos la naturaleza del problema para intentar su
+ solución por medios geométricos, y, en este intento, no sólo encontramos
+ solución para los mismos, sino que además surgieron planteos más generales
+ que pudimos resolverlos sin hacer uso del cálculo diferencial.
+ Por otra parte, resolverlos analíticamente implica el tedio de cuentas
+ largas y complicadas.
+\end_layout
+
+\begin_layout Standard
+Más allá de encontrar o no las soluciones, aquí lo esencial es promover
+ en los estudiantes una actitud creativa capaz de plantear e intentar resolver
+ problemas, buscar distintos caminos de ataque y agotar todas las instancias.
+ Quizás esto lleve mucho tiempo pero de eso se trata la matemática: de pensar
+ y repensar aunque a veces no se encuentre la solución.
+ Si podemos transmitir esto a nuestros estudiantes estaremos formando personas
+ "resolvedoras de problemas", como dice George Polya (1.887-1.985).
+\end_layout
+
+\end_body
+\end_document

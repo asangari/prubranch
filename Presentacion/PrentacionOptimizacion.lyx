@@ -1,0 +1,1753 @@
+#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass beamer
+\begin_preamble
+\usetheme{Warsaw}
+% or ...
+
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+
+\theoremstyle{definition}
+
+\newtheorem{defin}{Definici\'on}
+
+
+\theoremstyle{theorem}
+
+\newtheorem{teo}{Teorema}
+
+
+\theoremstyle{theorem}
+
+\newtheorem{cor}{Corolario}
+
+
+\theoremstyle{theorem}
+
+\newtheorem{ejem}{Ejemplo}
+
+
+\theoremstyle{theorem}
+
+\newtheorem{prop}{Proposici\'on}
+
+
+\renewenvironment{example}{\begin{ejem}}{\end{ejem}}
+
+\renewenvironment{theorem}{\begin{teo}}{\end{teo}}
+
+\renewenvironment{corollary}{\begin{cor}}{\end{cor}}
+\end_preamble
+\use_default_options false
+\language spanish
+\inputencoding auto
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_amsmath 2
+\use_esint 0
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Optimización Sin Cálculo Diferencial
+\end_layout
+
+\begin_layout Subtitle
+
+\lang english
+XXXV Reunión de Educación Matemática
+\end_layout
+
+\begin_layout Author
+
+\lang english
+Cristina Egüez
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+and
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Antonio
+\begin_inset space ~
+\end_inset
+
+Sángari 
+\end_layout
+
+\begin_layout Institute
+
+\lang english
+Universidad Nacional de Salta
+\end_layout
+
+\begin_layout Date
+
+\lang english
+Agosto, 2012
+\end_layout
+
+\begin_layout BeginFrame
+Principio
+\end_layout
+
+\begin_layout FrameSubtitle
+Resolución de un problema clásico del cálculo diferencial
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Al resolver este problema usando multiplicadores de Lagrange, resulta un
+ único punto crítico 
+\begin_inset Formula $\left(a,b,c\right)$
+\end_inset
+
+, donde 
+\begin_inset Formula $a,$
+\end_inset
+
+
+\begin_inset Formula $b$
+\end_inset
+
+ y 
+\begin_inset Formula $c$
+\end_inset
+
+ son los vértices del tetraedro, es la solución para minimizar.
+ La justificación analítica a través de la condición suficiente se hace
+ tediosa por lo complicado de los cálculos.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Sea 
+\emph default
+
+\begin_inset Formula $A$
+\end_inset
+
+
+\emph on
+
+\begin_inset space \space{}
+\end_inset
+
+un punto del primer octante.
+ Entre todos los tetraedros que tienen al punto 
+\emph default
+
+\begin_inset Formula $A$
+\end_inset
+
+
+\emph on
+
+\begin_inset space \space{}
+\end_inset
+
+en la cara opuesta al origen, y las caras restantes sobre los planos coordenados
+, encontrar el de menor área.
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename tetra.wmf
+	width 50col%
+	rotateOrigin center
+	groupId Optimizacion
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\series bold
+\shape italic
+\color blue
+La resolución y comprobación analítica, nos resultó tedioso
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Motivación
+\end_layout
+
+\begin_layout FrameSubtitle
+Ubicación geométrica del punto 
+\begin_inset Formula $A$
+\end_inset
+
+ que minimiza el área
+\end_layout
+
+\begin_layout Standard
+\align left
+
+\series bold
+\shape italic
+\color blue
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\align center
+
+\series bold
+\shape italic
+\color blue
+Evitar cálculos tediosos, nos llevó a resolver el problema geométricamente
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename tetra.wmf
+	scale 80
+	groupId opti
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Proceso
+\end_layout
+
+\begin_layout FrameSubtitle
+De lo particular a lo general y del plano al espacio
+\end_layout
+
+\begin_layout Standard
+\align left
+
+\series bold
+\shape italic
+\color blue
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\align left
+
+\series bold
+\shape italic
+\color blue
+Nuestro objetivo de resolver el problema haciendo uso de la geometría, generó
+ el siguiente proceso
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Encontrar el área mínima de:
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<2->
+\end_layout
+
+\end_inset
+
+un triángulo con catetos sobre los ejes coordenados y un punto 
+\begin_inset Formula $A$
+\end_inset
+
+ sobre la hipotenusa.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<3->
+\end_layout
+
+\end_inset
+
+cualquier triángulo conocidos un ángulo y un punto 
+\begin_inset Formula $A$
+\end_inset
+
+ en el lado opuesto.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<4->
+\end_layout
+
+\end_inset
+
+un tetraedro con tres caras en los planos coordenados y un punto 
+\begin_inset Formula $A$
+\end_inset
+
+ en la cara opuesta al origen.
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+<5->
+\end_layout
+
+\end_inset
+
+cualquier tetraedro conocidos un ángulo triedro y un punto 
+\begin_inset Formula $A$
+\end_inset
+
+ en la cara opuesta.
+\end_layout
+
+\begin_layout BeginFrame
+Desarrollo (1ª parte)
+\end_layout
+
+\begin_layout FrameSubtitle
+Problema 1.
+ Área mínima de un triágulo rectángulo
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Sea 
+\emph default
+
+\begin_inset Formula $A$
+\end_inset
+
+
+\emph on
+
+\begin_inset space \space{}
+\end_inset
+
+un punto del primer cuadrante.
+ Entre todos los triángulos que tienen al punto 
+\emph default
+
+\begin_inset Formula $A$
+\end_inset
+
+
+\emph on
+
+\begin_inset space \space{}
+\end_inset
+
+en uno de sus lados, y los lados restantes sobre los ejes de coordenadas,
+ encontrar el de menor área.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/cristina/Documentos/REM2012/Optimizacion/TriCoorFig1.PNG
+	width 50col%
+	rotateOrigin center
+	groupId Optimizacion
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Pause
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\series bold
+\shape italic
+\emph on
+\color blue
+\lang spanish-mexico
+El triángulo de menor área es el que tiene a 
+\emph default
+
+\begin_inset Formula $A$
+\end_inset
+
+
+\emph on
+
+\begin_inset space \space{}
+\end_inset
+
+como punto medio de la hipotenusa
+\end_layout
+
+\begin_layout BeginFrame
+Triángulo de área mínima
+\end_layout
+
+\begin_layout Theorem
+
+\emph on
+Sea un ángulo 
+\emph default
+
+\begin_inset Formula $A$
+\end_inset
+
+
+\emph on
+
+\begin_inset space \space{}
+\end_inset
+
+y un punto 
+\emph default
+
+\begin_inset Formula $A^{\prime}$
+\end_inset
+
+
+\emph on
+
+\begin_inset space \space{}
+\end_inset
+
+en el interior de 
+\emph default
+
+\begin_inset Formula $A$
+\end_inset
+
+
+\emph on
+.
+ De todos los triángulos tales que comparten el ángulo 
+\emph default
+
+\begin_inset Formula $A$
+\end_inset
+
+
+\emph on
+
+\begin_inset space \space{}
+\end_inset
+
+y el lado opuesto 
+\emph default
+
+\begin_inset Formula $BC$
+\end_inset
+
+
+\emph on
+
+\begin_inset space \space{}
+\end_inset
+
+contiene a 
+\emph default
+
+\begin_inset Formula $A^{\prime}$
+\end_inset
+
+
+\emph on
+, el de menor área es el que tiene a 
+\emph default
+
+\begin_inset Formula $A^{\prime}$
+\end_inset
+
+
+\emph on
+
+\begin_inset space \space{}
+\end_inset
+
+como punto medio de 
+\emph default
+
+\begin_inset Formula $BC$
+\end_inset
+
+
+\emph on
+.
+
+\emph default
+ 
+\end_layout
+
+\begin_layout BeginFrame
+Probamos la existencia
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/cristina/Documentos/Optimizacion/TriGen1.png
+	width 50col%
+	rotateOrigin center
+	groupId Optimizacion
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/cristina/Documentos/Optimizacion/TriGen2.png
+	width 50col%
+	rotateOrigin center
+	groupId Optimizacion
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/cristina/Documentos/Optimizacion/TriGen3.png
+	width 50col%
+	rotateOrigin center
+	groupId Optimizacion
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/cristina/Documentos/Optimizacion/TriGen4.png
+	width 50col%
+	rotateOrigin center
+	groupId Optimizacion
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/cristina/Documentos/Optimizacion/TriGen5.png
+	width 50col%
+	rotateOrigin center
+	groupId Optimizacion
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/cristina/Documentos/Optimizacion/TriGen6.png
+	width 50col%
+	rotateOrigin center
+	groupId Optimizacion
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/cristina/Documentos/Optimizacion/TriGen7.png
+	width 50col%
+	rotateOrigin center
+	groupId Optimizacion
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/cristina/Documentos/Optimizacion/TriGen8.png
+	width 50col%
+	rotateOrigin center
+	groupId Optimizacion
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/cristina/Documentos/Optimizacion/TriGen9.png
+	width 50col%
+	rotateOrigin center
+	groupId Optimizacion
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/cristina/Documentos/Optimizacion/TriGen10.png
+	width 50col%
+	rotateOrigin center
+	groupId Optimizacion
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+
+\lang english
+4.5cm
+\end_layout
+
+\end_deeper
+\begin_layout ColumnsTopAligned
+
+\family roman
+\shape italic
+\color black
+\lang english
+Por
+\family default
+ ser
+\color blue
+ 
+\begin_inset Formula $B'C'A'B$
+\end_inset
+
+ 
+\color black
+y
+\color blue
+ 
+\begin_inset Formula $B'C'CA'$
+\end_inset
+
+ 
+\color black
+paralelogramos,
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\shape italic
+\color blue
+\lang english
+\begin_inset Formula \[
+B'C'\simeq BA'\]
+
+\end_inset
+
+
+\begin_inset Formula \[
+B'C'\simeq A'C\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\shape italic
+\color black
+\lang english
+Luego,
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\shape italic
+\color blue
+\lang english
+\begin_inset Formula \[
+BA'\simeq A'C\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\shape italic
+\color black
+\lang english
+Por tanto:
+\color blue
+ 
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\shape italic
+\color red
+\lang english
+\begin_inset Formula ${\color{red}A'}$
+\end_inset
+
+
+\color inherit
+ 
+\color black
+es punto medio de
+\color inherit
+ 
+\begin_inset Formula ${\color{red}BC}$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+
+\lang english
+6.5cm
+\end_layout
+
+\begin_layout Standard
+\align left
+
+\lang english
+\begin_inset Graphics
+	filename cuadrilateros.png
+	scale 80
+	groupId opti
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout BeginFrame
+Probamos que es el menor
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename TriGen11.png
+	width 50col%
+	rotateOrigin center
+	groupId Optimizacion
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/cristina/Documentos/Optimizacion/TriGen12.png
+	width 50col%
+	rotateOrigin center
+	groupId Optimizacion
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/cristina/Documentos/Optimizacion/TriGen13.png
+	width 50col%
+	rotateOrigin center
+	groupId Optimizacion
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/cristina/Documentos/Optimizacion/TriGen14.png
+	width 50col%
+	rotateOrigin center
+	groupId Optimizacion
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/cristina/Documentos/Optimizacion/TriGen15.png
+	width 50col%
+	rotateOrigin center
+	groupId Optimizacion
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/cristina/Documentos/Optimizacion/TriGen16.png
+	width 50col%
+	rotateOrigin center
+	groupId Optimizacion
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/cristina/Documentos/Optimizacion/TriGen17.png
+	width 50col%
+	rotateOrigin center
+	groupId Optimizacion
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/cristina/Documentos/Optimizacion/TriGen18.png
+	width 50col%
+	rotateOrigin center
+	groupId Optimizacion
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/cristina/Documentos/Optimizacion/TriGen19.png
+	width 50col%
+	rotateOrigin center
+	groupId Optimizacion
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename /home/cristina/Documentos/Optimizacion/TriGen20.png
+	width 50col%
+	rotateOrigin center
+	groupId Optimizacion
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+
+\lang english
+3.5cm
+\end_layout
+
+\end_deeper
+\begin_layout ColumnsTopAligned
+
+\shape italic
+\color blue
+\lang english
+\begin_inset Formula \[
+{\color{blue}DA'C\simeq D'A'B'}\]
+
+\end_inset
+
+
+\begin_inset Formula \[
+{\color{blue}B'C'\simeq A'C}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\shape italic
+\color black
+\lang english
+Luego,
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\shape italic
+\color blue
+\lang english
+\begin_inset Formula \[
+{\color{blue}DAE-CAB=BD'E}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\color black
+\lang english
+Así:
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\color blue
+\lang english
+\begin_inset Formula \[
+{\color{blue}{\color{blue}}CAB<DAE}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+
+\lang english
+7.5cm
+\end_layout
+
+\end_deeper
+\begin_layout ColumnsTopAligned
+
+\lang english
+\begin_inset Graphics
+	filename TriGen20.png
+	scale 80
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Desarrollo (2ª parte)
+\end_layout
+
+\begin_layout FrameSubtitle
+Problema 2.
+ Área mínima de un tetraedro
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+Sea 
+\emph default
+
+\begin_inset Formula $A$
+\end_inset
+
+
+\emph on
+
+\begin_inset space \space{}
+\end_inset
+
+un punto del primer octante.
+ Entre todos los tetraedros que tienen al punto 
+\emph default
+
+\begin_inset Formula $A$
+\end_inset
+
+
+\emph on
+
+\begin_inset space \space{}
+\end_inset
+
+en una de sus caras, y los caras restantes sobre los plano coordenados,
+ encontrar el de menor área.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename tetraPresInic.wmf
+	scale 60
+	rotateOrigin centerTop
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+Los tetraedros tienen la misma altura
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Acá sólo explicamos que aplicamos el teorema anterior para las bases
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+
+\lang english
+7,5cm
+\end_layout
+
+\end_deeper
+\begin_layout ColumnsTopAligned
+
+\lang english
+\begin_inset Graphics
+	filename tetra1.wmf
+	scale 65
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+
+\lang english
+4cm
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+\color black
+Por el teorema anterior:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+{\color{blue}OST>OPQ}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+\color black
+\lang english
+Dado que los tetraedros tienen la misma altura:
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+\color blue
+\lang english
+\begin_inset Formula \[
+{\color{blue}OSTR>OPQR}\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout BeginFrame
+Los tetraedros tienen distinta altura
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename alturaDifer.wmf
+	scale 50
+	groupId optim2
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename tetraPresent1ra.PNG
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename tetraPresent2da.PNG
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename tetraPresent3ra.PNG
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename tetraPresent4ta.PNG
+	scale 50
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+
+\lang english
+7cm
+\end_layout
+
+\end_deeper
+\begin_layout ColumnsTopAligned
+
+\lang english
+\begin_inset Graphics
+	filename tetraPresent4ta.PNG
+	scale 37
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+
+\lang english
+5cm
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+\color black
+Por el teorema anterior:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+{\color{blue}OST>OKL}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+\color black
+\lang english
+Luego,
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+\color blue
+\lang english
+\begin_inset Formula \[
+{\color{blue}OSTU>OKLU}\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+\color black
+\lang english
+Así, nos resta probar que:
+\end_layout
+
+\begin_layout Standard
+
+\color blue
+\lang english
+\begin_inset Formula \[
+{\color{blue}OKLU>OPQR}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+
+\lang english
+5cm
+\end_layout
+
+\end_deeper
+\begin_layout ColumnsTopAligned
+
+\lang english
+\begin_inset Graphics
+	filename tetraPresent5ta.wmf
+	scale 55
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+
+\lang english
+5cm
+\end_layout
+
+\end_deeper
+\begin_layout ColumnsTopAligned
+\begin_inset Formula ${\color{blue}IGH}$
+\end_inset
+
+ base media de 
+\begin_inset Formula ${\color{blue}OPQR}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\lang english
+\begin_inset Formula \[
+{\color{blue}V_{a}=OPQR}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ColumnsTopAligned
+\begin_inset Formula \[
+{\color{blue}V_{b}=OKLU}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout BeginFrame
+
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+
+\lang english
+7.5cm
+\end_layout
+
+\end_deeper
+\begin_layout ColumnsTopAligned
+
+\lang english
+\begin_inset Graphics
+	filename tetraPresent6ta.png
+	scale 55
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+
+\lang english
+5.5cm
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula ${\color{blue}IGHR=\frac{8}{27}V_{a}}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula ${\color{blue}IGHU<\frac{8}{27}V_{b}}$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\color blue
+\begin_inset Formula ${\color{blue}OPQGHI=\frac{19}{27}V_{a}}$
+\end_inset
+
+
+\color inherit
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Formula ${\color{blue}OKLGHI>\frac{19}{27}V_{b}}$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Formula \[
+{\color{blue}GKPLQH>\frac{19}{27}\left\vert V_{a}-V_{b}\right\vert >\frac{8}{27}\left\vert V_{a}-V_{b}\right\vert >RGUH}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+{\color{blue}OKLU>OPQR}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Author1990"
+
+\end_inset
+
+A.
+ Author.
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+newblock
+\end_layout
+
+\end_inset
+
+
+\emph on
+Handbook of Everything
+\emph default
+.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+newblock
+\end_layout
+
+\end_inset
+
+ Some Press, 1990.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+beamertemplatearticlebibitems
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Followed by interesting articles.
+ Keep the list short.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "Someone2002"
+
+\end_inset
+
+S.
+ Someone.
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+newblock
+\end_layout
+
+\end_inset
+
+ On this and that
+\emph on
+.
+
+\emph default
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+newblock
+\end_layout
+
+\end_inset
+
+
+\emph on
+Journal on This and That
+\emph default
+.
+ 2(1):50--100, 2000.
+\end_layout
+
+\begin_layout EndFrame
+
+\end_layout
+
+\end_body
+\end_document
